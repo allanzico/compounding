@@ -39,6 +39,42 @@ from cbets.picks import FIELDS
 
 EDGE_THRESHOLD = 0.04
 MIN_TRAIN = 380
+
+# A rating built on a handful of matches is not a rating. A newly promoted side
+# five games into its first season can look like the best attack in the league
+# purely because it started hot, and the model will then confidently disagree
+# with the market by fifty points. Both teams must clear this before a fixture
+# is priced at all.
+MIN_TEAM_EFFECTIVE_MATCHES = 10.0
+
+# Real edges in liquid football markets are low single digits. Anything this far
+# above the market is a bug -- a name mismatch, a thin rating, a parsing error --
+# and treating it as an opportunity is how you turn a defect into a bet. These
+# are counted and reported, never logged as picks.
+MAX_PLAUSIBLE_EDGE = 0.25
+
+# Shrinkage toward the league average. 0.02 was far too weak: it left a 5-match
+# team rated on 5 matches. Roughly, a team with n effective matches keeps
+# n/(n+2*RIDGE) of its raw signal, so this pulls thin teams hard toward the mean
+# while barely touching sides with a full season behind them.
+RIDGE = 1.0
+
+# THE GATE, MEASURED ON REAL DATA (2026-09-19, walk-forward, 5 top divisions
+# 2019-2026). The model LOSES to the de-vigged closing line in both markets:
+#
+#   1X2     model log loss 0.99311 vs closing 0.96970 over 10,708 matches
+#           (delta -0.02341, 95% CI -0.02708..-0.01973)
+#           simulated ROI -12.40%, fair CLV -6.81%
+#   Totals  model log loss 0.68506 vs closing 0.66924 over 10,700 matches
+#           simulated ROI -6.38%
+#
+# Method v2 section 8: on a failed gate, stop -- and do not tune until it passes,
+# because that is fitting the test. So picks are still computed and logged at
+# stake 0, because the CLV log is the asset this project builds, but they no
+# longer trigger a notification: pinging about "edges" from a model known to be
+# worse than the market would be manufacturing false signal. Flip this to True
+# only when a rerun of the gate genuinely passes.
+GATE_PASSED = False
 START_YEAR, END_YEAR = 2019, 2026
 KILL_AFTER_N_PICKS = 100
 
@@ -52,17 +88,37 @@ def _read(repo: str, rel: str) -> pd.DataFrame | None:
     src = f"{repo.rstrip('/')}/{rel}" if "://" in repo else str(Path(repo) / rel)
     try:
         if "://" in src:
+            import io
+
             import requests
             r = requests.get(src, timeout=45)
             if r.status_code != 200 or len(r.content) < 200:
                 return None
-            import io
-            return pd.read_csv(io.BytesIO(r.content), encoding="latin-1", on_bad_lines="skip")
-        p = Path(src)
-        return pd.read_csv(p, encoding="latin-1", on_bad_lines="skip") if p.exists() else None
+            blob = r.content
+        else:
+            p = Path(src)
+            if not p.exists():
+                return None
+            blob = p.read_bytes()
     except Exception as exc:
         print(f"  ! {rel}: {exc}", file=sys.stderr)
         return None
+
+    # utf-8-sig FIRST, and this ordering is load-bearing. football-data.co.uk ships
+    # these files with a UTF-8 BOM, and latin-1 happily decodes it into the first
+    # column's name -- so "Div" arrives as "\ufeffDiv", the division lookup finds
+    # nothing, and the whole run reports "no historical season files" while sitting
+    # on 137 perfectly good CSVs. It fails silently, which is the worst kind.
+    import io
+    for enc in ("utf-8-sig", "latin-1"):
+        try:
+            df = pd.read_csv(io.BytesIO(blob), encoding=enc, on_bad_lines="skip")
+            if len(df.columns) > 3:
+                df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
+                return df
+        except Exception:
+            continue
+    return None
 
 
 def load_history(repo: str, divisions: list[str]) -> pd.DataFrame:
@@ -84,19 +140,33 @@ def load_history(repo: str, divisions: list[str]) -> pd.DataFrame:
 
 def load_fixtures(repo: str) -> pd.DataFrame:
     raw = _read(repo, "data/fixtures.csv")
-    if raw is None or raw.empty:
+    if raw is None or raw.empty or "Div" not in raw.columns:
         return pd.DataFrame()
-    fx = D.normalise(raw, "fixtures", "")
-    if fx.empty:
-        # fixtures.csv has no results, so normalise's dropna removes everything.
-        raw = raw.copy()
-        raw["FTHG"] = 0
-        raw["FTAG"] = 0
-        fx = D.normalise(raw, "fixtures", "")
-        fx["fthg"] = np.nan
-        fx["ftag"] = np.nan
-    fx["div"] = raw["Div"].astype(str).str.strip().values[: len(fx)] if "Div" in raw else ""
-    return fx
+
+    # fixtures.csv carries no results, and normalise drops rows without them, so
+    # stand in dummy scores to survive that filter and blank them afterwards.
+    raw = raw.copy()
+    raw["FTHG"] = 0
+    raw["FTAG"] = 0
+
+    # Normalise per division rather than patching the div column back on afterwards:
+    # normalise drops rows and resets the index, so any positional re-attachment
+    # would quietly misalign fixtures with their leagues.
+    frames = []
+    for div, grp in raw.groupby("Div"):
+        d = str(div).strip()
+        if not d:
+            continue
+        f = D.normalise(grp, "fixtures", d)
+        if not f.empty:
+            frames.append(f)
+    if not frames:
+        return pd.DataFrame()
+
+    fx = pd.concat(frames, ignore_index=True)
+    fx["fthg"] = np.nan
+    fx["ftag"] = np.nan
+    return fx.sort_values("date").reset_index(drop=True)
 
 
 # ----------------------------------------------------------------- settling
@@ -167,7 +237,11 @@ def scan(hist: pd.DataFrame, fixtures: pd.DataFrame, today: pd.Timestamp,
     """Price every upcoming fixture and return the selections that clear the gates."""
     upcoming = fixtures[(fixtures["date"] >= today)
                         & (fixtures["date"] <= today + pd.Timedelta(days=horizon_days))]
-    candidates, stats = [], {"fixtures_scanned": 0, "divisions_priced": [], "divisions_skipped": {}}
+    candidates, stats = [], {
+        "fixtures_scanned": 0, "divisions_priced": [], "divisions_skipped": {},
+        "fixtures_skipped_thin_ratings": 0, "thin_teams": [],
+        "implausible_edges_rejected": 0, "implausible_examples": [],
+    }
 
     for div, grp in upcoming.groupby("div"):
         train = hist[(hist["div"] == div) & (hist["date"] < today)]
@@ -175,7 +249,8 @@ def scan(hist: pd.DataFrame, fixtures: pd.DataFrame, today: pd.Timestamp,
             stats["divisions_skipped"][str(div)] = f"only {len(train)} training matches"
             continue
         try:
-            model = fit_model(train, as_of=today, response="blend", half_life_days=180, ridge=0.02)
+            model = fit_model(train, as_of=today, response="blend", half_life_days=180,
+                              ridge=RIDGE)
         except Exception as exc:
             stats["divisions_skipped"][str(div)] = f"fit failed: {exc}"
             continue
@@ -183,6 +258,17 @@ def scan(hist: pd.DataFrame, fixtures: pd.DataFrame, today: pd.Timestamp,
 
         for r in grp.itertuples():
             stats["fixtures_scanned"] += 1
+
+            # Gate: refuse to price a fixture where either side's rating rests on
+            # too little data. Silence is the correct output here, not a guess.
+            wh = model.effective_matches(r.home)
+            wa = model.effective_matches(r.away)
+            if min(wh, wa) < MIN_TEAM_EFFECTIVE_MATCHES:
+                stats["fixtures_skipped_thin_ratings"] += 1
+                thin = r.home if wh <= wa else r.away
+                stats["thin_teams"].append(f"{thin} ({min(wh, wa):.1f} eff. matches)")
+                continue
+
             # --- probability first: the odds columns are not consulted here ---
             lam, mu = model.rates(r.home, r.away)
             m = score_matrix(lam, mu, model.rho, model.max_goals)
@@ -196,6 +282,11 @@ def scan(hist: pd.DataFrame, fixtures: pd.DataFrame, today: pd.Timestamp,
                 q = devig(trio, "shin")
                 for k, sel in enumerate(SEL_1X2):
                     edge = p1x2[k] * trio[k] - 1.0
+                    if edge > MAX_PLAUSIBLE_EDGE:
+                        stats["implausible_edges_rejected"] += 1
+                        stats["implausible_examples"].append(
+                            f"{r.home} v {r.away} ({div}) {sel} edge {edge*100:+.0f}%")
+                        continue
                     if edge >= EDGE_THRESHOLD:
                         candidates.append(dict(
                             kickoff=str(r.date.date()), league=str(div),
@@ -208,6 +299,11 @@ def scan(hist: pd.DataFrame, fixtures: pd.DataFrame, today: pd.Timestamp,
                 q = devig(pair, "multiplicative")
                 for k, (sel, p) in enumerate((("OVER", p_over), ("UNDER", 1 - p_over))):
                     edge = p * pair[k] - 1.0
+                    if edge > MAX_PLAUSIBLE_EDGE:
+                        stats["implausible_edges_rejected"] += 1
+                        stats["implausible_examples"].append(
+                            f"{r.home} v {r.away} ({div}) {sel} edge {edge*100:+.0f}%")
+                        continue
                     if edge >= EDGE_THRESHOLD:
                         candidates.append(dict(
                             kickoff=str(r.date.date()), league=str(div),
@@ -217,6 +313,9 @@ def scan(hist: pd.DataFrame, fixtures: pd.DataFrame, today: pd.Timestamp,
                             lam=lam, mu=mu))
 
     # Gate 5: one selection per fixture, keeping the largest edge.
+    stats["thin_teams"] = sorted(set(stats["thin_teams"]))[:12]
+    stats["implausible_examples"] = stats["implausible_examples"][:8]
+
     best: dict[str, dict] = {}
     for c in candidates:
         if c["fixture"] not in best or c["edge_pct"] > best[c["fixture"]]["edge_pct"]:
@@ -318,13 +417,21 @@ def main() -> int:
     report["running"] = after
 
     # Quiet unless it matters.
+    report["gate_passed"] = GATE_PASSED
     reasons = []
-    if picks:
+    if picks and GATE_PASSED:
         reasons.append(f"{len(picks)} selection(s) cleared the {EDGE_THRESHOLD*100:.0f}% edge gate")
     if "kill_criterion" in after and "kill_criterion" not in before:
         reasons.append("kill criterion met")
     if after.get("clv_verdict") != before.get("clv_verdict") and after.get("picks_with_clv", 0) >= 20:
         reasons.append(f"CLV verdict changed to: {after.get('clv_verdict')}")
+    # The one result worth waking someone up for: the model starting to beat the
+    # market after the backtest said it doesn't.
+    if (not GATE_PASSED and after.get("picks_with_clv", 0) >= 50
+            and after.get("clv_verdict") == "positive and significant"):
+        reasons.append(
+            "fair CLV has turned significantly POSITIVE despite the backtest gate failing "
+            "— worth re-running the full gate")
     if report["errors"]:
         reasons.append("errors during the run")
     report["notify"] = bool(reasons)

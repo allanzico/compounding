@@ -60,6 +60,13 @@ class DixonColes:
     n_train: int = 0
     trained_through: object = None
     index: dict = field(default_factory=dict, repr=False)
+    # Effective (time-decay-weighted) match count per team. A rating fitted on a
+    # handful of matches is not a rating, and this is how callers find out before
+    # betting against a market on the strength of one.
+    team_weight: dict = field(default_factory=dict, repr=False)
+
+    def effective_matches(self, team: str) -> float:
+        return float(self.team_weight.get(team, 0.0))
 
     # ---------- rates ----------
 
@@ -244,10 +251,15 @@ def fit(df: pd.DataFrame, as_of=None, half_life_days: float = 180.0,
     if fit_rho:
         rho = _fit_rho(df, index, inter, hadv, a, d, w_match)
 
+    tw = {}
+    for t_i, name in enumerate(teams):
+        tw[name] = float(w_match[(hi == t_i) | (ai == t_i)].sum())
+
     return DixonColes(
         teams=teams, intercept=float(inter), home_adv=float(hadv),
         attack=a, defence=d, rho=float(rho), max_goals=max_goals,
         n_train=len(df), trained_through=df["date"].max(), index=index,
+        team_weight=tw,
     )
 
 

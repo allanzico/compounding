@@ -56,6 +56,19 @@ _COLMAP: dict[str, list[str]] = {
     "ftr":        ["FTR", "Res"],
     "hxg":        ["HxG"],
     "axg":        ["AxG"],
+    # Half-time goals and discipline. These were missing from the first version of
+    # this map, which silently dropped the half-time, fouls and cards markets: the
+    # columns simply never reached the normalised frame, so every model for them
+    # was skipped without an error.
+    "hthg":       ["HTHG"],
+    "htag":       ["HTAG"],
+    "htr":        ["HTR"],
+    "hf":         ["HF"],
+    "af":         ["AF"],
+    "hy":         ["HY"],
+    "ay":         ["AY"],
+    "hr":         ["HR"],
+    "ar":         ["AR"],
     "hs":         ["HS"],
     "ashots":     ["AS"],
     "hst":        ["HST"],
@@ -88,7 +101,7 @@ _COLMAP: dict[str, list[str]] = {
     "c_ah_a":     ["B365CAHA", "AvgCAHA", "MaxCAHA"],
 }
 
-_NUMERIC = [c for c in _COLMAP if c not in ("home", "away", "ftr")]
+_NUMERIC = [c for c in _COLMAP if c not in ("home", "away", "ftr", "htr")]
 
 # Columns whose absence changes what you are allowed to conclude.
 CRITICAL = ["c_h", "c_d", "c_a"]

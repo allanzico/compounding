@@ -65,7 +65,7 @@ def run_daily(tmp: Path, today, log="picks.csv", out="report.json", extra=()):
 
 
 def test_daily_runs_and_finds_planted_edges(tmp_path):
-    first_future, _ = write_repo(tmp_path, bias_draw=-0.06)
+    first_future, _ = write_repo(tmp_path, bias_draw=-0.02)
     r, rep = run_daily(tmp_path, first_future)
     assert r.returncode == 0, r.stderr[-2000:]
     assert rep["errors"] == []
@@ -83,22 +83,36 @@ def test_daily_runs_and_finds_planted_edges(tmp_path):
     assert log["fixture"].duplicated().sum() == 0
 
 
-def test_sharp_book_produces_far_fewer_picks(tmp_path):
-    """Against a sharp book the honest output is close to nothing."""
-    first_future, _ = write_repo(tmp_path, bias_draw=0.0)
-    _, rep = run_daily(tmp_path, first_future)
-    sharp = len(rep["qualifying_picks"])
+def test_sharp_book_produces_fewer_picks_than_a_biased_one(tmp_path):
+    """Against a sharp book the honest output is close to nothing.
 
-    tmp2 = tmp_path / "biased"
-    tmp2.mkdir()
-    ff2, _ = write_repo(tmp2, bias_draw=-0.06)
-    _, rep2 = run_daily(tmp2, ff2)
-    assert len(rep2["qualifying_picks"]) > sharp
+    Aggregated over several seeds on purpose: one synthetic fixture week yields a
+    handful of picks, and comparing two single-digit counts from one seed measures
+    noise rather than the thing being tested.
+    """
+    sharp = biased = 0
+    for i, seed in enumerate((21, 33, 47)):
+        a = tmp_path / f"sharp{i}"; a.mkdir()
+        write_repo(a, bias_draw=0.0, seed=seed)
+        ff, _ = write_repo(a, bias_draw=0.0, seed=seed)
+        _, r = run_daily(a, ff)
+        sharp += len(r["qualifying_picks"])
+
+        b = tmp_path / f"biased{i}"; b.mkdir()
+        # -0.02 on purpose: it plants a ~20% edge, which is large but inside what a
+        # soft market could plausibly be wrong by. A bigger bias produces 50-100%
+        # edges that MAX_PLAUSIBLE_EDGE correctly refuses as defects, and the test
+        # would then be asserting that the safety gate fails to fire.
+        ff2, _ = write_repo(b, bias_draw=-0.02, seed=seed)
+        _, r2 = run_daily(b, ff2)
+        biased += len(r2["qualifying_picks"])
+
+    assert biased > sharp, f"biased book gave {biased} picks, sharp gave {sharp}"
 
 
 def test_settling_fills_in_results_and_clv(tmp_path):
     """Day 2: results have landed, so pending picks settle and CLV appears."""
-    first_future, _ = write_repo(tmp_path, bias_draw=-0.06)
+    first_future, _ = write_repo(tmp_path, bias_draw=-0.02)
     _, rep1 = run_daily(tmp_path, first_future)
     assert len(rep1["qualifying_picks"]) > 0
 
@@ -126,3 +140,37 @@ def test_missing_data_reports_an_error_and_notifies(tmp_path):
     assert r.returncode == 1
     assert rep["notify"] is True
     assert any("fixtures.csv" in e for e in rep["errors"])
+
+
+def test_thin_ratings_are_never_priced(tmp_path):
+    """A team with almost no history must not be priced at all.
+
+    This is the Amedspor case: a side five matches into its first top-flight
+    season looked like the best attack in the league and produced a +113% "edge"
+    against Besiktas. Silence is the correct output, not a confident guess.
+    """
+    import json
+
+    from cbets.model import fit as fit_model
+    from cbets.synth import make_league
+
+    L = make_league(n_teams=20, seasons=4, seed=5)
+    df = L.matches
+    cutoff = df["date"].max()
+    model = fit_model(df, as_of=cutoff, response="blend", half_life_days=180, ridge=1.0)
+
+    weights = [model.effective_matches(t) for t in L.teams]
+    assert min(weights) > 0
+    # an unseen team has no history at all and must read as zero
+    assert model.effective_matches("Newly Promoted FC") == 0.0
+
+    import daily
+    assert daily.MIN_TEAM_EFFECTIVE_MATCHES > 0
+    assert model.effective_matches("Newly Promoted FC") < daily.MIN_TEAM_EFFECTIVE_MATCHES
+
+
+def test_implausible_edges_are_rejected_not_bet():
+    """A 100%+ edge is a defect. Betting it turns a bug into a loss."""
+    import daily
+    assert 0.10 < daily.MAX_PLAUSIBLE_EDGE < 0.50
+    assert daily.MAX_PLAUSIBLE_EDGE > daily.EDGE_THRESHOLD

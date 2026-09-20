@@ -1,0 +1,67 @@
+name: daily pipeline
+
+# Everything computational happens here, on GitHub's runner, and gets committed.
+#
+# Why: the Claude cloud sandbox refuses to execute code cloned from a repo — its
+# permission classifier rejects it as "Code from External" and asks for an
+# approval nobody is awake to give at 06:00 UTC. So the daily Claude run must
+# execute nothing. It downloads the finished artefacts this job commits and
+# republishes the dashboard. That is the whole reason this file does the work.
+
+on:
+  schedule:
+    - cron: "10 5 * * *"      # 05:10 UTC, before the Claude task at 06:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install numpy pandas scipy requests
+
+      - name: Fetch football data
+        run: python scripts/fetch_data.py
+
+      # Each step keeps going on failure so one broken stage does not lose the
+      # rest of the day's output. Errors land in report.json / the log.
+      - name: Settle picks, refit, scan
+        continue-on-error: true
+        run: python daily.py --repo . --log picks.csv --out report.json --horizon-days 3
+
+      - name: Build projection sheet
+        continue-on-error: true
+        run: >
+          python generate_sheet.py --repo . --out projections.csv
+          --summary summary.json --labels-dir validation --horizon-days 4
+
+      - name: Build dashboard page
+        continue-on-error: true
+        run: python scripts/build_dashboard.py
+
+      - name: Commit
+        run: |
+          git config user.name  "cbets-bot"
+          git config user.email "cbets-bot@users.noreply.github.com"
+          git add -A data/ dashboard/ validation/ \
+                  picks.csv report.json projections.csv summary.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "daily: $(date -u +%Y-%m-%d)"
+            git push
+          fi

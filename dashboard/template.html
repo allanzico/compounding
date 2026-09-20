@@ -1,0 +1,341 @@
+<title>Match Projections</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F4F6F6; --surface:#FFFFFF; --sunk:#ECEFEF;
+  --ink:#171C20; --body:#39434A; --muted:#6C7981; --line:#DCE2E2;
+  --accent:#1F7A7A; --accent-soft:#E3F0EF;
+  --good:#3F8A52; --good-soft:#E4F0E6;
+  --warn:#B4801F; --warn-soft:#F6EEDC;
+  --weak:#9C5142; --weak-soft:#F4E7E4;
+  --shadow:0 1px 2px rgba(23,28,32,.06),0 4px 12px rgba(23,28,32,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0F1418; --surface:#181F24; --sunk:#131A1E;
+  --ink:#E6EBEB; --body:#B6C0C4; --muted:#7E8B92; --line:#283238;
+  --accent:#4FB3AE; --accent-soft:#16302F;
+  --good:#6FB97F; --good-soft:#16281A;
+  --warn:#D6A64A; --warn-soft:#2B2416;
+  --weak:#C57C6C; --weak-soft:#2B1C18;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 16px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --paper:#0F1418; --surface:#181F24; --sunk:#131A1E;
+  --ink:#E6EBEB; --body:#B6C0C4; --muted:#7E8B92; --line:#283238;
+  --accent:#4FB3AE; --accent-soft:#16302F;
+  --good:#6FB97F; --good-soft:#16281A;
+  --warn:#D6A64A; --warn-soft:#2B2416;
+  --weak:#C57C6C; --weak-soft:#2B1C18;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 16px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--body);font-family:"Source Sans 3",system-ui,sans-serif;
+  font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:0 64px}
+h1,h2,h3,.disp{font-family:Archivo,system-ui,sans-serif;color:var(--ink);text-wrap:balance;margin:0}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);
+  border-bottom:1px solid var(--line)}
+.topin{max-width:1180px;margin:0 auto;padding:14px 16px 12px}
+.brow{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
+h1{font-size:19px;letter-spacing:-.01em;font-weight:700}
+.stamp{color:var(--muted);font-size:12.5px}
+.stats{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:9px}
+.stat{display:flex;align-items:baseline;gap:5px}
+.stat b{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink);font-size:14px}
+.stat span{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em}
+
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0 6px}
+select,input[type=search]{background:var(--surface);border:1px solid var(--line);color:var(--ink);
+  border-radius:7px;padding:7px 10px;font:inherit;font-size:13.5px;min-width:0}
+input[type=search]{flex:1 1 180px;max-width:280px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+  font-size:12.5px;cursor:pointer;color:var(--body);white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip .vd{font-size:10px;margin-left:5px;opacity:.75}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:10px 0 18px;
+  padding:10px 12px;background:var(--sunk);border-radius:8px}
+.legend b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 7px;border-radius:4px;font-weight:600;white-space:nowrap}
+.t-good{background:var(--good-soft);color:var(--good)}
+.t-warn{background:var(--warn-soft);color:var(--warn)}
+.t-weak{background:var(--weak-soft);color:var(--weak)}
+
+.fx{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;
+  box-shadow:var(--shadow);overflow:hidden}
+.fxh{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;
+  width:100%;text-align:left;background:none;border:0;padding:12px 14px;cursor:pointer}
+.fxh:hover{background:var(--sunk)}
+.divc{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;color:var(--accent);
+  background:var(--accent-soft);border-radius:5px;padding:3px 0;text-align:center}
+.fxn{font-family:Archivo,sans-serif;font-weight:600;color:var(--ink);font-size:15px;line-height:1.3}
+.fxm{color:var(--muted);font-size:12px;margin-top:2px;font-family:"IBM Plex Mono",monospace}
+.fxr{display:flex;align-items:center;gap:14px}
+.xg{text-align:right}
+.xg b{font-family:"IBM Plex Mono",monospace;color:var(--ink);font-size:14px;font-weight:600}
+.xg span{display:block;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.caret{color:var(--muted);font-size:12px;transition:transform .15s}
+.fx[data-open="1"] .caret{transform:rotate(90deg)}
+@media (prefers-reduced-motion:reduce){.caret{transition:none}}
+
+.body{border-top:1px solid var(--line);padding:4px 14px 14px}
+.grp{margin-top:14px}
+.grph{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:6px}
+.grph h3{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:440px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  font-weight:600;padding:5px 8px;border-bottom:1px solid var(--line)}
+th.r,td.r{text-align:right}
+td{padding:6px 8px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--sunk)}
+.sel{color:var(--ink)}
+.pct{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink)}
+.od{font-family:"IBM Plex Mono",monospace}
+.pos{color:var(--good);font-weight:600}
+.neg{color:var(--weak)}
+.add{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:3px 9px;
+  font-size:12px;cursor:pointer;white-space:nowrap}
+.add:hover{border-color:var(--accent);color:var(--accent)}
+.add[data-in="1"]{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.slip{position:fixed;right:0;bottom:0;left:0;z-index:30;background:var(--surface);
+  border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.10);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.slipin{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+  justify-content:space-between}
+.slipL{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 320px;min-width:0}
+.pill{display:flex;align-items:center;gap:7px;background:var(--sunk);border:1px solid var(--line);
+  border-radius:7px;padding:4px 8px;font-size:12.5px;max-width:100%}
+.pill b{color:var(--ink);font-weight:600}
+.pill button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:15px;line-height:1;padding:0 2px}
+.pill button:hover{color:var(--weak)}
+.slipR{display:flex;gap:18px;align-items:center}
+.res b{display:block;font-family:"IBM Plex Mono",monospace;font-size:19px;color:var(--ink);font-weight:600}
+.res span{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.inband b{color:var(--accent)}
+.warnrow{flex-basis:100%;font-size:12px;color:var(--warn);display:flex;gap:6px;align-items:flex-start}
+.empty{padding:40px 16px;text-align:center;color:var(--muted)}
+.note{font-size:12.5px;color:var(--muted);margin:2px 0 0}
+@media(max-width:560px){
+  .fxh{grid-template-columns:46px 1fr;row-gap:8px}
+  .fxr{grid-column:1/-1;justify-content:space-between}
+  h1{font-size:17px}
+}
+</style>
+
+<header class="top">
+  <div class="topin">
+    <div class="brow">
+      <h1>Match Projections</h1>
+      <span class="stamp" id="stamp"></span>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="bar">
+    <select id="fdiv" aria-label="Division"></select>
+    <input type="search" id="fq" placeholder="Search team or fixture" aria-label="Search">
+    <select id="fsort" aria-label="Sort">
+      <option value="date">Sort: kick-off</option>
+      <option value="div">Sort: division</option>
+      <option value="conf">Sort: most data</option>
+    </select>
+    <button class="chip" id="onlypriced" aria-pressed="false">Priced markets only</button>
+  </div>
+  <div class="chips" id="grpchips" role="group" aria-label="Market groups"></div>
+
+  <div class="legend">
+    <span><b>How each market tested</b> — walk-forward on 43,289 matches, against the honest baseline of using the league average:</span>
+    <span><span class="tag t-good">beats average</span> the team model adds real information</span>
+    <span><span class="tag t-warn">marginal</span> small gain, some bias</span>
+    <span><span class="tag t-weak">no better</span> the league average did as well — treat these as context, not signal</span>
+  </div>
+
+  <div id="list"></div>
+  <p class="note" id="foot"></p>
+</div>
+
+<div class="slip" id="slip" hidden>
+  <div class="slipin">
+    <div class="slipL" id="sliplist"></div>
+    <div class="slipR">
+      <div class="res" id="rprob"><b>—</b><span>combined chance</span></div>
+      <div class="res" id="rodds"><b>—</b><span>fair odds</span></div>
+      <div class="res" id="rprice"><b>—</b><span>at offered price</span></div>
+      <button class="add" id="clear">Clear</button>
+    </div>
+    <div class="warnrow" id="corrwarn" hidden></div>
+  </div>
+</div>
+
+<script>
+const D = __DATA__;
+const $ = s => document.querySelector(s);
+const G = D.groups, M = D.markets, S = D.selections, F = D.fixtures, L = D.lines;
+const GNAME = {goals:"Goals & result", ht_goals:"Half-time", shots:"Shots", sot:"Shots on target",
+               corners:"Corners", fouls:"Fouls", yellows:"Cards"};
+const tagFor = v => v.startsWith("beats") ? ["t-good","beats average"]
+                 : v.startsWith("marginal") ? ["t-warn","marginal"] : ["t-weak","no better"];
+
+const byFx = new Map();
+L.forEach(l => { if(!byFx.has(l[0])) byFx.set(l[0],[]); byFx.get(l[0]).push(l); });
+
+$("#stamp").textContent = "generated " + D.generated.replace("T"," ").replace("+00:00"," UTC");
+$("#stats").innerHTML = [["fixtures",D.counts.fixtures],["divisions",D.counts.divisions],
+  ["market lines",D.counts.lines.toLocaleString()],["matches modelled",D.counts.history.toLocaleString()]]
+  .map(([k,v])=>`<div class="stat"><b class="num">${v}</b><span>${k}</span></div>`).join("");
+$("#foot").textContent = "Probabilities from a Dixon–Coles goals model and negative-binomial count models, "
+  + "fitted per division on matches before today with a 180-day half-life. Tackles are not in this data source. "
+  + "Prices shown are Bet365 opening where the fixture file carries them; everything else gives fair odds to check by hand.";
+
+const divs = [...new Set(F.map(f=>f.v))].sort();
+$("#fdiv").innerHTML = `<option value="">All divisions (${divs.length})</option>` +
+  divs.map(d=>`<option value="${d}">${d}</option>`).join("");
+
+const active = new Set(G);
+$("#grpchips").innerHTML = G.map(g=>{
+  const [cls,txt] = tagFor(D.validation[g]||"");
+  return `<button class="chip" data-g="${g}" aria-pressed="true">${GNAME[g]||g}<span class="vd tag ${cls}">${txt}</span></button>`;
+}).join("");
+$("#grpchips").addEventListener("click", e=>{
+  const b = e.target.closest(".chip"); if(!b) return;
+  const g = b.dataset.g, on = b.getAttribute("aria-pressed")==="true";
+  b.setAttribute("aria-pressed", String(!on)); on ? active.delete(g) : active.add(g);
+  render();
+});
+
+let onlyPriced = false;
+$("#onlypriced").addEventListener("click", e=>{
+  onlyPriced = !onlyPriced; e.currentTarget.setAttribute("aria-pressed", String(onlyPriced)); render();
+});
+["#fdiv","#fq","#fsort"].forEach(s=>$(s).addEventListener("input", render));
+
+const open = new Set([0,1,2]);
+const slip = [];
+
+function lineRow(l, fi){
+  const [,g,m,s,p,fair,price,edge] = l;
+  const key = `${fi}:${g}:${m}:${s}`;
+  const inSlip = slip.some(x=>x.key===key);
+  const pr = price==null ? '<td class="r od" style="color:var(--muted)">—</td><td class="r">—</td>'
+    : `<td class="r od">${price.toFixed(2)}</td><td class="r od ${edge>=0?"pos":"neg"}">${edge>0?"+":""}${edge.toFixed(1)}%</td>`;
+  return `<tr>
+    <td class="sel">${S[s]}</td>
+    <td class="r pct">${(p*100).toFixed(1)}%</td>
+    <td class="r od">${fair.toFixed(2)}</td>
+    ${pr}
+    <td class="r"><button class="add" data-key="${key}" data-in="${inSlip?1:0}"
+      data-p="${p}" data-price="${price==null?"":price}"
+      data-label="${F[fi].h} v ${F[fi].a} · ${M[m]} · ${S[s]}" data-fi="${fi}">${inSlip?"✓":"+"}</button></td>
+  </tr>`;
+}
+
+function fxBody(fi){
+  const rows = (byFx.get(fi)||[]).filter(l=>active.has(G[l[1]]) && (!onlyPriced || l[6]!=null));
+  if(!rows.length) return `<div class="body"><p class="note">No markets match the current filters.</p></div>`;
+  const byGroup = new Map();
+  rows.forEach(l=>{ const g=G[l[1]]; if(!byGroup.has(g)) byGroup.set(g,new Map());
+    const mm=byGroup.get(g), k=M[l[2]]; if(!mm.has(k)) mm.set(k,[]); mm.get(k).push(l); });
+  let h = '<div class="body">';
+  for(const [g,mk] of byGroup){
+    const [cls,txt] = tagFor(D.validation[g]||"");
+    h += `<div class="grp"><div class="grph"><h3>${GNAME[g]||g}</h3><span class="tag ${cls}">${txt}</span></div>`;
+    for(const [mname,ls] of mk){
+      h += `<div class="tw"><table><caption class="note" style="text-align:left;padding:4px 8px">${mname}</caption>
+        <thead><tr><th>Selection</th><th class="r">Chance</th><th class="r">Fair</th>
+        <th class="r">Price</th><th class="r">Edge</th><th class="r"></th></tr></thead><tbody>`;
+      h += ls.map(l=>lineRow(l,fi)).join("");
+      h += `</tbody></table></div>`;
+    }
+    h += `</div>`;
+  }
+  return h + "</div>";
+}
+
+function render(){
+  const dv = $("#fdiv").value, q = $("#fq").value.trim().toLowerCase(), sort = $("#fsort").value;
+  let idx = F.map((f,i)=>i).filter(i=>{
+    const f = F[i];
+    if(dv && f.v!==dv) return false;
+    if(q && !(f.f.toLowerCase().includes(q))) return false;
+    return true;
+  });
+  idx.sort((a,b)=>{
+    const x=F[a], y=F[b];
+    if(sort==="div") return x.v.localeCompare(y.v) || x.d.localeCompare(y.d);
+    if(sort==="conf") return (y.c||0)-(x.c||0);
+    return x.d.localeCompare(y.d) || x.v.localeCompare(y.v);
+  });
+  const el = $("#list");
+  if(!idx.length){ el.innerHTML = `<div class="empty">No fixtures match those filters.</div>`; return; }
+  el.innerHTML = idx.map(i=>{
+    const f=F[i], isOpen=open.has(i);
+    const ex = [["shots",f.es],["SOT",f.eo],["corners",f.ec],["fouls",f.ef]]
+      .filter(([,v])=>v!=null).map(([k,v])=>`${v} ${k}`).join(" · ");
+    return `<article class="fx" data-open="${isOpen?1:0}">
+      <button class="fxh" data-i="${i}" aria-expanded="${isOpen}">
+        <span class="divc">${f.v}</span>
+        <span><span class="fxn">${f.h} v ${f.a}</span><span class="fxm">${f.d}${ex?" · "+ex:""}</span></span>
+        <span class="fxr">
+          <span class="xg"><b>${f.xh!=null?f.xh.toFixed(2):"—"} – ${f.xa!=null?f.xa.toFixed(2):"—"}</b><span>expected goals</span></span>
+          <span class="caret">▶</span>
+        </span>
+      </button>
+      ${isOpen?fxBody(i):""}
+    </article>`;
+  }).join("");
+}
+
+$("#list").addEventListener("click", e=>{
+  const h = e.target.closest(".fxh");
+  if(h){ const i=+h.dataset.i; open.has(i)?open.delete(i):open.add(i); render(); return; }
+  const a = e.target.closest(".add");
+  if(a){
+    const key=a.dataset.key, at=slip.findIndex(x=>x.key===key);
+    if(at>=0) slip.splice(at,1);
+    else slip.push({key, p:+a.dataset.p, price:a.dataset.price?+a.dataset.price:null,
+                    label:a.dataset.label, fi:+a.dataset.fi});
+    render(); drawSlip();
+  }
+});
+
+function drawSlip(){
+  const s=$("#slip");
+  if(!slip.length){ s.hidden=true; return; }
+  s.hidden=false;
+  $("#sliplist").innerHTML = slip.map((x,i)=>
+    `<span class="pill"><b>${x.label}</b><button data-i="${i}" aria-label="Remove">×</button></span>`).join("");
+  const p = slip.reduce((a,x)=>a*x.p,1);
+  const fair = 1/p;
+  $("#rprob").querySelector("b").textContent = (p*100).toFixed(1)+"%";
+  $("#rodds").querySelector("b").textContent = fair.toFixed(2);
+  $("#rodds").classList.toggle("inband", fair>=1.5 && fair<=2.0);
+  const prices = slip.map(x=>x.price);
+  $("#rprice").querySelector("b").textContent =
+    prices.every(v=>v!=null) ? prices.reduce((a,b)=>a*b,1).toFixed(2) : "—";
+  const fxs = slip.map(x=>x.fi), dupe = fxs.length!==new Set(fxs).size;
+  const w = $("#corrwarn");
+  w.hidden = !dupe;
+  if(dupe) w.innerHTML = "<span>⚠</span><span>Two selections are on the same fixture. They are "
+    + "correlated, so the combined chance above is wrong — it assumes independence. Selections from "
+    + "different matches are close enough to independent for this to hold.</span>";
+}
+$("#sliplist").addEventListener("click", e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  slip.splice(+b.dataset.i,1); render(); drawSlip();
+});
+$("#clear").addEventListener("click", ()=>{ slip.length=0; render(); drawSlip(); });
+
+render(); drawSlip();
+</script>
