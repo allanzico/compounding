@@ -1,0 +1,32 @@
+{
+  "run_at": "2026-09-22T13:00:37+00:00",
+  "today": "2026-09-22",
+  "notify": false,
+  "errors": [],
+  "history_matches": 43448,
+  "history_with_closing": 43409,
+  "picks_settled_today": 0,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
+  "divisions_skipped": {},
+  "fixtures_skipped_thin_ratings": 0,
+  "thin_teams": [],
+  "implausible_edges_rejected": 0,
+  "implausible_examples": [],
+  "qualifying_picks": [],
+  "running": {
+    "picks_total": 29,
+    "picks_with_clv": 29,
+    "mean_clv_fair_pct": -9.452,
+    "clv_ci95": [
+      -12.197,
+      -6.706
+    ],
+    "clv_verdict": "negative and significant",
+    "picks_settled": 29,
+    "paper_roi_pct": 1.483,
+    "hit_rate": 0.4138
+  },
+  "gate_passed": false,
+  "notify_reasons": []
+}
