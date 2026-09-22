@@ -49,6 +49,9 @@ DIVISIONS = {
 
 # canonical -> ordered fallback list of source column names
 _COLMAP: dict[str, list[str]] = {
+    # Kick-off time. Without it the page can tell you a match is on Sunday but not
+    # when, which is the first thing you need to find it in an app's schedule.
+    "time":       ["Time", "KO"],
     "home":       ["HomeTeam", "Home"],
     "away":       ["AwayTeam", "Away"],
     "fthg":       ["FTHG", "HG"],
@@ -101,7 +104,7 @@ _COLMAP: dict[str, list[str]] = {
     "c_ah_a":     ["B365CAHA", "AvgCAHA", "MaxCAHA"],
 }
 
-_NUMERIC = [c for c in _COLMAP if c not in ("home", "away", "ftr", "htr")]
+_NUMERIC = [c for c in _COLMAP if c not in ("home", "away", "ftr", "htr", "time")]
 
 # Columns whose absence changes what you are allowed to conclude.
 CRITICAL = ["c_h", "c_d", "c_a"]

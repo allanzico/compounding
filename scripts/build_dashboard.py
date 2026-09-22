@@ -49,8 +49,15 @@ def main() -> int:
     mi = {m: i for i, m in enumerate(markets)}
     si = {x: i for i, x in enumerate(sels)}
 
+    for col, default in (("kickoff", ""), ("country", ""), ("league", ""),
+                         ("league_label", "")):
+        if col not in d.columns:
+            d[col] = default
+
     fx = (d.groupby(["fixture"], sort=False)
-            .agg(date=("date", "first"), division=("div", "first"),
+            .agg(date=("date", "first"), kickoff=("kickoff", "first"),
+                 division=("div", "first"), country=("country", "first"),
+                 league=("league", "first"), league_label=("league_label", "first"),
                  home=("home", "first"), away=("away", "first"),
                  conf=("confidence", "first"), xh=("xg_home", "first"),
                  xa=("xg_away", "first"), es=("exp_shots", "first"),
@@ -69,7 +76,11 @@ def main() -> int:
                    "lines": int(s["market_lines"]), "history": int(s["history_matches"])},
         "validation": s.get("validation", {}),
         "groups": groups, "markets": markets, "selections": sels,
-        "fixtures": [{"f": r.fixture, "d": r.date, "v": r.division, "h": r.home, "a": r.away,
+        "fixtures": [{"f": r.fixture, "d": r.date, "t": str(r.kickoff or ""),
+                      "v": r.division, "cn": str(r.country or ""),
+                      "lg": str(r.league or r.division),
+                      "ll": str(r.league_label or r.division),
+                      "h": r.home, "a": r.away,
                       "c": n(r.conf, 0), "xh": n(r.xh), "xa": n(r.xa), "es": n(r.es, 1),
                       "eo": n(r.eo, 1), "ec": n(r.ec, 1), "ef": n(r.ef, 1)}
                      for r in fx.itertuples()],

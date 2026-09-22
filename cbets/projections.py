@@ -16,6 +16,7 @@ import pandas as pd
 from scipy.stats import poisson
 
 from .counts import METRICS, fit_counts
+from .leagues import country_of, label_of, name_of
 from .devig import devig
 from .model import ah_home, fit as fit_goals, prob_over, probs_1x2, score_matrix
 
@@ -75,7 +76,10 @@ def project_division(hist: pd.DataFrame, fixtures: pd.DataFrame, div: str,
             diag["skipped"].append(f"{h} v {a} ({min(wh, wa):.0f} eff. matches)")
             continue
 
-        base = dict(date=str(pd.Timestamp(r.date).date()), div=div,
+        ko = getattr(r, "time", None)
+        ko = str(ko) if ko is not None and str(ko) not in ("nan", "NaT", "") else ""
+        base = dict(date=str(pd.Timestamp(r.date).date()), kickoff=ko, div=div,
+                    country=country_of(div), league=name_of(div), league_label=label_of(div),
                     fixture=f"{h} v {a}", home=h, away=a,
                     confidence=round(float(min(wh, wa)), 1))
 

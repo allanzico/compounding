@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-report.json
+
+# report.json used to be scratch and was ignored here. The daily Action now
+# commits it as an artefact the publish step reads, so it must NOT be ignored.

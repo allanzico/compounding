@@ -68,15 +68,37 @@ input[type=search]{flex:1 1 180px;max-width:280px}
 .t-warn{background:var(--warn-soft);color:var(--warn)}
 .t-weak{background:var(--weak-soft);color:var(--weak)}
 
+.dayhead{font-family:Archivo,sans-serif;font-weight:700;color:var(--ink);font-size:15px;
+  letter-spacing:-.01em;margin:22px 0 2px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+.dayhead:first-child{margin-top:4px}
+.dayhead .cnt{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12px;
+  color:var(--muted);margin-left:8px}
+.leaguehead{display:flex;align-items:center;gap:8px;margin:14px 0 6px;width:100%;
+  background:none;border:0;padding:5px 6px;border-radius:7px;cursor:pointer;text-align:left}
+.leaguehead:hover{background:var(--sunk)}
+.leaguehead .ctry{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+  font-weight:600}
+.leaguehead .lg{font-family:Archivo,sans-serif;font-weight:600;color:var(--ink);font-size:13.5px}
+.leaguehead .code{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--accent);
+  background:var(--accent-soft);border-radius:4px;padding:1px 6px}
+.leaguehead .lcnt{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  color:var(--muted)}
+.leaguehead .lcaret{color:var(--muted);font-size:11px;transition:transform .15s;flex:0 0 auto}
+.leaguehead[aria-expanded="true"] .lcaret{transform:rotate(90deg)}
+@media (prefers-reduced-motion:reduce){.leaguehead .lcaret{transition:none}}
+.lgroup[hidden]{display:none}
+.ko{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;color:var(--ink);
+  text-align:center;line-height:1.15}
+.ko small{display:block;font-size:10px;font-weight:400;color:var(--muted);letter-spacing:.04em}
 .fx{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;
   box-shadow:var(--shadow);overflow:hidden}
-.fxh{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;
+.fxh{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;
   width:100%;text-align:left;background:none;border:0;padding:12px 14px;cursor:pointer}
 .fxh:hover{background:var(--sunk)}
 .divc{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;color:var(--accent);
   background:var(--accent-soft);border-radius:5px;padding:3px 0;text-align:center}
-.fxn{font-family:Archivo,sans-serif;font-weight:600;color:var(--ink);font-size:15px;line-height:1.3}
-.fxm{color:var(--muted);font-size:12px;margin-top:2px;font-family:"IBM Plex Mono",monospace}
+.fxn{display:block;font-family:Archivo,sans-serif;font-weight:600;color:var(--ink);font-size:15px;line-height:1.3}
+.fxm{display:block;color:var(--muted);font-size:12px;margin-top:3px;font-family:"IBM Plex Mono",monospace}
 .fxr{display:flex;align-items:center;gap:14px}
 .xg{text-align:right}
 .xg b{font-family:"IBM Plex Mono",monospace;color:var(--ink);font-size:14px;font-weight:600}
@@ -144,14 +166,15 @@ tbody tr:hover{background:var(--sunk)}
 
 <div class="wrap">
   <div class="bar">
-    <select id="fdiv" aria-label="Division"></select>
+    <select id="fdiv" aria-label="Competition"></select>
     <input type="search" id="fq" placeholder="Search team or fixture" aria-label="Search">
     <select id="fsort" aria-label="Sort">
       <option value="date">Sort: kick-off</option>
-      <option value="div">Sort: division</option>
+      <option value="div">Sort: competition</option>
       <option value="conf">Sort: most data</option>
     </select>
     <button class="chip" id="onlypriced" aria-pressed="false">Priced markets only</button>
+    <button class="chip" id="foldall">Collapse all leagues</button>
   </div>
   <div class="chips" id="grpchips" role="group" aria-label="Market groups"></div>
 
@@ -192,16 +215,26 @@ const byFx = new Map();
 L.forEach(l => { if(!byFx.has(l[0])) byFx.set(l[0],[]); byFx.get(l[0]).push(l); });
 
 $("#stamp").textContent = "generated " + D.generated.replace("T"," ").replace("+00:00"," UTC");
-$("#stats").innerHTML = [["fixtures",D.counts.fixtures],["divisions",D.counts.divisions],
+$("#stats").innerHTML = [["fixtures",D.counts.fixtures],["competitions",D.counts.divisions],
   ["market lines",D.counts.lines.toLocaleString()],["matches modelled",D.counts.history.toLocaleString()]]
   .map(([k,v])=>`<div class="stat"><b class="num">${v}</b><span>${k}</span></div>`).join("");
 $("#foot").textContent = "Probabilities from a Dixon–Coles goals model and negative-binomial count models, "
   + "fitted per division on matches before today with a 180-day half-life. Tackles are not in this data source. "
   + "Prices shown are Bet365 opening where the fixture file carries them; everything else gives fair odds to check by hand.";
 
-const divs = [...new Set(F.map(f=>f.v))].sort();
-$("#fdiv").innerHTML = `<option value="">All divisions (${divs.length})</option>` +
-  divs.map(d=>`<option value="${d}">${d}</option>`).join("");
+const divs = [...new Set(F.map(f=>f.v))];
+const byCountry = new Map();
+divs.forEach(d=>{
+  const f = F.find(x=>x.v===d), c = f.cn || "Other";
+  if(!byCountry.has(c)) byCountry.set(c,[]);
+  byCountry.get(c).push({code:d, name:f.lg || d});
+});
+$("#fdiv").innerHTML = `<option value="">All competitions (${divs.length})</option>` +
+  [...byCountry.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([c,ls])=>
+    `<optgroup label="${c}">` +
+    ls.sort((a,b)=>a.name.localeCompare(b.name))
+      .map(l=>`<option value="${l.code}">${l.name}</option>`).join("") +
+    `</optgroup>`).join("");
 
 const active = new Set(G);
 $("#grpchips").innerHTML = G.map(g=>{
@@ -221,8 +254,29 @@ $("#onlypriced").addEventListener("click", e=>{
 });
 ["#fdiv","#fq","#fsort"].forEach(s=>$(s).addEventListener("input", render));
 
+$("#foldall").addEventListener("click", ()=>{
+  const keys = [...document.querySelectorAll(".leaguehead")].map(b=>b.dataset.lg);
+  const anyOpen = keys.some(k=>!collapsed.has(k));
+  anyOpen ? keys.forEach(k=>collapsed.add(k)) : keys.forEach(k=>collapsed.delete(k));
+  saveCollapsed(); render();
+});
+
 const open = new Set([0,1,2]);
 const slip = [];
+
+// Which league groups are folded shut, keyed "date|code". Kept in localStorage so
+// the leagues you never bet stay out of the way between visits — a per-viewer
+// convenience, so every access is guarded: private windows and blocked site data
+// both throw here, and the page must render fine either way.
+const LSKEY = "cbets.collapsedLeagues";
+let collapsed = new Set();
+try {
+  const raw = localStorage.getItem(LSKEY);
+  if (raw) collapsed = new Set(JSON.parse(raw));
+} catch (e) { /* storage unavailable — start expanded */ }
+function saveCollapsed(){
+  try { localStorage.setItem(LSKEY, JSON.stringify([...collapsed])); } catch (e) {}
+}
 
 function lineRow(l, fi){
   const [,g,m,s,p,fair,price,edge] = l;
@@ -279,14 +333,15 @@ function render(){
   });
   const el = $("#list");
   if(!idx.length){ el.innerHTML = `<div class="empty">No fixtures match those filters.</div>`; return; }
-  el.innerHTML = idx.map(i=>{
+
+  const card = i => {
     const f=F[i], isOpen=open.has(i);
     const ex = [["shots",f.es],["SOT",f.eo],["corners",f.ec],["fouls",f.ef]]
       .filter(([,v])=>v!=null).map(([k,v])=>`${v} ${k}`).join(" · ");
     return `<article class="fx" data-open="${isOpen?1:0}">
       <button class="fxh" data-i="${i}" aria-expanded="${isOpen}">
-        <span class="divc">${f.v}</span>
-        <span><span class="fxn">${f.h} v ${f.a}</span><span class="fxm">${f.d}${ex?" · "+ex:""}</span></span>
+        <span class="ko">${f.t||"—"}<small>${f.t?"kick-off":""}</small></span>
+        <span><span class="fxn">${f.h} v ${f.a}</span><span class="fxm">${ex||f.ll}</span></span>
         <span class="fxr">
           <span class="xg"><b>${f.xh!=null?f.xh.toFixed(2):"—"} – ${f.xa!=null?f.xa.toFixed(2):"—"}</b><span>expected goals</span></span>
           <span class="caret">▶</span>
@@ -294,10 +349,64 @@ function render(){
       </button>
       ${isOpen?fxBody(i):""}
     </article>`;
-  }).join("");
+  };
+
+  // Date, then competition — the hierarchy a schedule actually has, so the
+  // country and league are named once above their matches instead of repeated
+  // as an opaque code on every row.
+  const days = new Map();
+  idx.forEach(i=>{
+    const f=F[i];
+    if(!days.has(f.d)) days.set(f.d, new Map());
+    const lg = days.get(f.d), k = f.v;
+    if(!lg.has(k)) lg.set(k, []);
+    lg.get(k).push(i);
+  });
+
+  const cssId = k => k.replace(/[^a-zA-Z0-9_-]/g, "_");
+
+  const fmtDay = iso => {
+    const dt = new Date(iso + "T12:00:00");
+    if(isNaN(dt)) return iso;
+    return dt.toLocaleDateString(undefined,
+      {weekday:"long", day:"numeric", month:"long"});
+  };
+
+  let html = "";
+  for(const [day, lgs] of [...days.entries()].sort((a,b)=>a[0].localeCompare(b[0]))){
+    const n = [...lgs.values()].reduce((a,v)=>a+v.length,0);
+    html += `<h2 class="dayhead">${fmtDay(day)}<span class="cnt">${n} ${n===1?"match":"matches"}</span></h2>`;
+    const order = [...lgs.entries()].sort((a,b)=>{
+      const fa=F[a[1][0]], fb=F[b[1][0]];
+      return (fa.cn||"").localeCompare(fb.cn||"") || (fa.lg||"").localeCompare(fb.lg||"");
+    });
+    for(const [code, list] of order){
+      const f = F[list[0]], key = `${day}|${code}`, shut = collapsed.has(key);
+      html += `<button class="leaguehead" data-lg="${key}" aria-expanded="${!shut}"`
+            + ` aria-controls="g-${cssId(key)}">`
+            + `<span class="lcaret">▶</span>`
+            + `<span class="ctry">${f.cn||""}</span>`
+            + `<span class="lg">${f.lg||code}</span><span class="code">${code}</span>`
+            + `<span class="lcnt">${list.length}</span></button>`;
+      html += `<div class="lgroup" id="g-${cssId(key)}"${shut?" hidden":""}>`
+            + list.sort((a,b)=>(F[a].t||"").localeCompare(F[b].t||"")).map(card).join("")
+            + `</div>`;
+    }
+  }
+  el.innerHTML = html;
+
+  const keys = [...document.querySelectorAll(".leaguehead")].map(b=>b.dataset.lg);
+  $("#foldall").textContent = keys.length && keys.every(k=>collapsed.has(k))
+    ? "Expand all leagues" : "Collapse all leagues";
 }
 
 $("#list").addEventListener("click", e=>{
+  const lh = e.target.closest(".leaguehead");
+  if(lh){
+    const k = lh.dataset.lg;
+    collapsed.has(k) ? collapsed.delete(k) : collapsed.add(k);
+    saveCollapsed(); render(); return;
+  }
   const h = e.target.closest(".fxh");
   if(h){ const i=+h.dataset.i; open.has(i)?open.delete(i):open.add(i); render(); return; }
   const a = e.target.closest(".add");
