@@ -1,21 +1,139 @@
 {
-  "run_at": "2026-09-24T09:55:09+00:00",
-  "today": "2026-09-24",
+  "run_at": "2026-09-25T10:09:01+00:00",
+  "today": "2026-09-25",
   "notify": false,
   "errors": [],
-  "history_matches": 43448,
-  "history_with_closing": 43409,
+  "history_matches": 7095,
+  "history_with_closing": 7095,
   "picks_settled_today": 0,
-  "fixtures_scanned": 0,
-  "divisions_priced": [],
-  "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 0,
-  "thin_teams": [],
-  "implausible_edges_rejected": 0,
-  "implausible_examples": [],
-  "qualifying_picks": [],
+  "fixtures_scanned": 15,
+  "divisions_priced": [
+    "E2",
+    "SP2"
+  ],
+  "divisions_skipped": {
+    "E3": "only 0 training matches",
+    "EC": "only 0 training matches",
+    "SC1": "only 0 training matches"
+  },
+  "fixtures_skipped_thin_ratings": 3,
+  "thin_teams": [
+    "Celta B (5.5 eff. matches)",
+    "Girona (5.6 eff. matches)",
+    "Mallorca (5.5 eff. matches)"
+  ],
+  "implausible_edges_rejected": 1,
+  "implausible_examples": [
+    "Stockport v Peterboro (E2) A edge +44%"
+  ],
+  "qualifying_picks": [
+    {
+      "kickoff": "2026-09-26",
+      "league": "SP2",
+      "fixture": "Ceuta v Sociedad B",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.3821026913433169,
+      "odds_available": 3.2,
+      "devigged_market_p": 0.28936393767782964,
+      "edge_pct": 22.27286122986143,
+      "lam": 1.3515104303117262,
+      "mu": 1.393069513375975
+    },
+    {
+      "kickoff": "2026-09-27",
+      "league": "SP2",
+      "fixture": "Eibar v Las Palmas",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.6555084592509329,
+      "odds_available": 1.83,
+      "devigged_market_p": 0.5196850393700787,
+      "edge_pct": 19.95804804292074,
+      "lam": 1.2475510529167286,
+      "mu": 0.830693921955704
+    },
+    {
+      "kickoff": "2026-09-27",
+      "league": "SP2",
+      "fixture": "Burgos v Eldense",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.6724856760955908,
+      "odds_available": 1.67,
+      "devigged_market_p": 0.5628272251308901,
+      "edge_pct": 12.305107907963663,
+      "lam": 1.3746576550377008,
+      "mu": 0.6408260483640114
+    },
+    {
+      "kickoff": "2026-09-26",
+      "league": "E2",
+      "fixture": "Cambridge v AFC Wimbledon",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.26494742868628557,
+      "odds_available": 4.2,
+      "devigged_market_p": 0.2126142229694717,
+      "edge_pct": 11.277920048239952,
+      "lam": 1.435752008058377,
+      "mu": 1.0272289299049386
+    },
+    {
+      "kickoff": "2026-09-26",
+      "league": "SP2",
+      "fixture": "Granada v Andorra",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.33637506755627405,
+      "odds_available": 3.25,
+      "devigged_market_p": 0.28616195308131315,
+      "edge_pct": 9.321896955789066,
+      "lam": 1.5182772435991312,
+      "mu": 1.3413029882523053
+    },
+    {
+      "kickoff": "2026-09-28",
+      "league": "SP2",
+      "fixture": "Leganes v Castellon",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.46591081866058587,
+      "odds_available": 2.32,
+      "devigged_market_p": 0.39996481254314503,
+      "edge_pct": 8.091309929255907,
+      "lam": 1.0392253709651706,
+      "mu": 1.4499836000347892
+    },
+    {
+      "kickoff": "2026-09-26",
+      "league": "E2",
+      "fixture": "Stockport v Peterboro",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.3694629051777195,
+      "odds_available": 2.88,
+      "devigged_market_p": 0.32710280373831774,
+      "edge_pct": 6.405316691183227,
+      "lam": 2.117226174563032,
+      "mu": 1.1333058898589834
+    },
+    {
+      "kickoff": "2026-09-27",
+      "league": "SP2",
+      "fixture": "Valladolid v Cordoba",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.3509540387967813,
+      "odds_available": 3.0,
+      "devigged_market_p": 0.3092278889221195,
+      "edge_pct": 5.286211639034377,
+      "lam": 1.3486647765984359,
+      "mu": 1.2706088647253877
+    }
+  ],
   "running": {
-    "picks_total": 29,
+    "picks_total": 37,
     "picks_with_clv": 29,
     "mean_clv_fair_pct": -9.452,
     "clv_ci95": [
