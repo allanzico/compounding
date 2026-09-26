@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-25T10:09:03+00:00",
- "today": "2026-09-25",
+ "generated": "2026-09-26T09:49:57+00:00",
+ "today": "2026-09-26",
  "fixtures": 12,
  "divisions": 2,
  "market_lines": 984,
@@ -46,19 +46,11 @@
    "error": "only 0 training matches"
   },
   {
-   "div": "SC1",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
    "div": "SP2",
    "train": 3300,
    "skipped": [
-    "Girona v Albacete (6 eff. matches)",
-    "Celta B v Sabadell (6 eff. matches)",
-    "Mallorca v Almeria (6 eff. matches)"
+    "Celta B v Sabadell (5 eff. matches)",
+    "Mallorca v Almeria (5 eff. matches)"
    ],
    "models": [
     "goals",

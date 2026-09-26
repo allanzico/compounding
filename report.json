@@ -1,25 +1,23 @@
 {
-  "run_at": "2026-09-25T10:09:01+00:00",
-  "today": "2026-09-25",
+  "run_at": "2026-09-26T09:49:55+00:00",
+  "today": "2026-09-26",
   "notify": false,
   "errors": [],
   "history_matches": 7095,
   "history_with_closing": 7095,
   "picks_settled_today": 0,
-  "fixtures_scanned": 15,
+  "fixtures_scanned": 14,
   "divisions_priced": [
     "E2",
     "SP2"
   ],
   "divisions_skipped": {
     "E3": "only 0 training matches",
-    "EC": "only 0 training matches",
-    "SC1": "only 0 training matches"
+    "EC": "only 0 training matches"
   },
-  "fixtures_skipped_thin_ratings": 3,
+  "fixtures_skipped_thin_ratings": 2,
   "thin_teams": [
     "Celta B (5.5 eff. matches)",
-    "Girona (5.6 eff. matches)",
     "Mallorca (5.5 eff. matches)"
   ],
   "implausible_edges_rejected": 1,
@@ -33,12 +31,12 @@
       "fixture": "Ceuta v Sociedad B",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.3821026913433169,
+      "p_model": 0.38208296098325045,
       "odds_available": 3.2,
       "devigged_market_p": 0.28936393767782964,
-      "edge_pct": 22.27286122986143,
-      "lam": 1.3515104303117262,
-      "mu": 1.393069513375975
+      "edge_pct": 22.266547514640145,
+      "lam": 1.3515197403519177,
+      "mu": 1.3929978040478421
     },
     {
       "kickoff": "2026-09-27",
@@ -46,12 +44,12 @@
       "fixture": "Eibar v Las Palmas",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.6555084592509329,
+      "p_model": 0.6554710633191587,
       "odds_available": 1.83,
       "devigged_market_p": 0.5196850393700787,
-      "edge_pct": 19.95804804292074,
-      "lam": 1.2475510529167286,
-      "mu": 0.830693921955704
+      "edge_pct": 19.951204587406046,
+      "lam": 1.2476132501106,
+      "mu": 0.8307700918002986
     },
     {
       "kickoff": "2026-09-27",
@@ -59,12 +57,12 @@
       "fixture": "Burgos v Eldense",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.6724856760955908,
+      "p_model": 0.6724601393176082,
       "odds_available": 1.67,
       "devigged_market_p": 0.5628272251308901,
-      "edge_pct": 12.305107907963663,
-      "lam": 1.3746576550377008,
-      "mu": 0.6408260483640114
+      "edge_pct": 12.300843266040552,
+      "lam": 1.3746310794742829,
+      "mu": 0.6409469757974395
     },
     {
       "kickoff": "2026-09-26",
@@ -72,12 +70,12 @@
       "fixture": "Cambridge v AFC Wimbledon",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.26494742868628557,
+      "p_model": 0.26495172265742034,
       "odds_available": 4.2,
       "devigged_market_p": 0.2126142229694717,
-      "edge_pct": 11.277920048239952,
-      "lam": 1.435752008058377,
-      "mu": 1.0272289299049386
+      "edge_pct": 11.279723516116547,
+      "lam": 1.435765346074097,
+      "mu": 1.0272499916381053
     },
     {
       "kickoff": "2026-09-26",
@@ -85,12 +83,12 @@
       "fixture": "Granada v Andorra",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.33637506755627405,
+      "p_model": 0.33637850848275325,
       "odds_available": 3.25,
       "devigged_market_p": 0.28616195308131315,
-      "edge_pct": 9.321896955789066,
-      "lam": 1.5182772435991312,
-      "mu": 1.3413029882523053
+      "edge_pct": 9.323015256894806,
+      "lam": 1.5182044580395482,
+      "mu": 1.3412601796812404
     },
     {
       "kickoff": "2026-09-28",
@@ -98,12 +96,12 @@
       "fixture": "Leganes v Castellon",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.46591081866058587,
+      "p_model": 0.46587084736293866,
       "odds_available": 2.32,
       "devigged_market_p": 0.39996481254314503,
-      "edge_pct": 8.091309929255907,
-      "lam": 1.0392253709651706,
-      "mu": 1.4499836000347892
+      "edge_pct": 8.082036588201769,
+      "lam": 1.0393300189536536,
+      "mu": 1.4499240179876531
     },
     {
       "kickoff": "2026-09-26",
@@ -111,12 +109,12 @@
       "fixture": "Stockport v Peterboro",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.3694629051777195,
+      "p_model": 0.36948536730226045,
       "odds_available": 2.88,
       "devigged_market_p": 0.32710280373831774,
-      "edge_pct": 6.405316691183227,
-      "lam": 2.117226174563032,
-      "mu": 1.1333058898589834
+      "edge_pct": 6.411785783051016,
+      "lam": 2.117083438472121,
+      "mu": 1.1333389008649144
     },
     {
       "kickoff": "2026-09-27",
@@ -124,16 +122,16 @@
       "fixture": "Valladolid v Cordoba",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.3509540387967813,
+      "p_model": 0.3509303055984168,
       "odds_available": 3.0,
       "devigged_market_p": 0.3092278889221195,
-      "edge_pct": 5.286211639034377,
-      "lam": 1.3486647765984359,
-      "mu": 1.2706088647253877
+      "edge_pct": 5.27909167952505,
+      "lam": 1.348727370426958,
+      "mu": 1.2705637204584606
     }
   ],
   "running": {
-    "picks_total": 37,
+    "picks_total": 45,
     "picks_with_clv": 29,
     "mean_clv_fair_pct": -9.452,
     "clv_ci95": [
