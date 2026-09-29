@@ -1,48 +1,8 @@
 {
-  "run_at": "2026-09-28T11:38:44+00:00",
-  "today": "2026-09-28",
-  "notify": false,
-  "errors": [],
-  "history_matches": 7109,
-  "history_with_closing": 7109,
-  "picks_settled_today": 17,
-  "fixtures_scanned": 1,
-  "divisions_priced": [
-    "SP2"
-  ],
-  "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 0,
-  "thin_teams": [],
-  "implausible_edges_rejected": 0,
-  "implausible_examples": [],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-09-28",
-      "league": "SP2",
-      "fixture": "Leganes v Castellon",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5497413986533182,
-      "odds_available": 1.95,
-      "devigged_market_p": 0.48684210526315796,
-      "edge_pct": 7.199572737397042,
-      "lam": 1.0434319162496568,
-      "mu": 1.433510660688827
-    }
-  ],
-  "running": {
-    "picks_total": 50,
-    "picks_with_clv": 46,
-    "mean_clv_fair_pct": -8.049,
-    "clv_ci95": [
-      -10.792,
-      -5.307
-    ],
-    "clv_verdict": "negative and significant",
-    "picks_settled": 46,
-    "paper_roi_pct": 1.522,
-    "hit_rate": 0.413
-  },
-  "gate_passed": false,
-  "notify_reasons": []
+  "run_at": "2026-09-29T11:18:39+00:00",
+  "today": "2026-09-29",
+  "notify": true,
+  "errors": [
+    "no historical season files found in the repo"
+  ]
 }
