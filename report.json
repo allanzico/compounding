@@ -1,6 +1,6 @@
 {
-  "run_at": "2026-09-30T11:06:34+00:00",
-  "today": "2026-09-30",
+  "run_at": "2026-10-01T11:33:07+00:00",
+  "today": "2026-10-01",
   "notify": true,
   "errors": [
     "no historical season files found in the repo"
