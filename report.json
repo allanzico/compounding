@@ -1,8 +1,166 @@
 {
-  "run_at": "2026-10-01T11:33:07+00:00",
-  "today": "2026-10-01",
-  "notify": true,
-  "errors": [
-    "no historical season files found in the repo"
-  ]
+  "run_at": "2026-10-02T11:02:14+00:00",
+  "today": "2026-10-02",
+  "notify": false,
+  "errors": [],
+  "history_matches": 7110,
+  "history_with_closing": 7110,
+  "picks_settled_today": 4,
+  "fixtures_scanned": 14,
+  "divisions_priced": [
+    "E2",
+    "SP2"
+  ],
+  "divisions_skipped": {
+    "E3": "only 0 training matches",
+    "EC": "only 0 training matches",
+    "SC1": "only 0 training matches",
+    "SC2": "only 0 training matches",
+    "SC3": "only 0 training matches"
+  },
+  "fixtures_skipped_thin_ratings": 3,
+  "thin_teams": [
+    "Celta B (6.3 eff. matches)",
+    "Mallorca (6.3 eff. matches)",
+    "Sabadell (6.4 eff. matches)"
+  ],
+  "implausible_edges_rejected": 2,
+  "implausible_examples": [
+    "Eldense v Oviedo (SP2) A edge +28%",
+    "Almeria v Burgos (SP2) A edge +72%"
+  ],
+  "qualifying_picks": [
+    {
+      "kickoff": "2026-10-03",
+      "league": "E2",
+      "fixture": "Burton v Huddersfield",
+      "market": "1x2",
+      "selection": "H",
+      "p_model": 0.3157901242275995,
+      "odds_available": 3.9,
+      "devigged_market_p": 0.22736980382801344,
+      "edge_pct": 23.158148448763804,
+      "lam": 1.2124508915332766,
+      "mu": 1.4313429405100313
+    },
+    {
+      "kickoff": "2026-10-04",
+      "league": "SP2",
+      "fixture": "Castellon v Ceuta",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.12057687757012671,
+      "odds_available": 10.0,
+      "devigged_market_p": 0.07711159208436169,
+      "edge_pct": 20.57687757012672,
+      "lam": 2.4592475540906142,
+      "mu": 0.9124549937605488
+    },
+    {
+      "kickoff": "2026-10-03",
+      "league": "SP2",
+      "fixture": "Albacete v Eibar",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.6294293817966808,
+      "odds_available": 1.88,
+      "devigged_market_p": 0.5065616797900262,
+      "edge_pct": 18.332723777775996,
+      "lam": 1.030838114482584,
+      "mu": 1.1441444884328185
+    },
+    {
+      "kickoff": "2026-10-04",
+      "league": "SP2",
+      "fixture": "Las Palmas v Valladolid",
+      "market": "1x2",
+      "selection": "H",
+      "p_model": 0.5188629233726169,
+      "odds_available": 2.15,
+      "devigged_market_p": 0.4387282732965967,
+      "edge_pct": 11.555528525112614,
+      "lam": 1.494254325355015,
+      "mu": 0.8722087870977703
+    },
+    {
+      "kickoff": "2026-10-03",
+      "league": "E2",
+      "fixture": "Leyton Orient v Plymouth",
+      "market": "1x2",
+      "selection": "H",
+      "p_model": 0.3256802284057292,
+      "odds_available": 3.4,
+      "devigged_market_p": 0.26735421717558205,
+      "edge_pct": 10.731277657947924,
+      "lam": 1.4214951970710947,
+      "mu": 1.6636301263578506
+    },
+    {
+      "kickoff": "2026-10-03",
+      "league": "E2",
+      "fixture": "Reading v Bradford",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.5975135370517737,
+      "odds_available": 1.85,
+      "devigged_market_p": 0.5194805194805195,
+      "edge_pct": 10.540004354578137,
+      "lam": 1.2813518982397785,
+      "mu": 1.0130893275231372
+    },
+    {
+      "kickoff": "2026-10-05",
+      "league": "SP2",
+      "fixture": "Cordoba v Tenerife",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.2688586940118281,
+      "odds_available": 4.0,
+      "devigged_market_p": 0.22496822502217062,
+      "edge_pct": 7.543477604731241,
+      "lam": 1.4671747364286742,
+      "mu": 1.0400861264761405
+    },
+    {
+      "kickoff": "2026-10-03",
+      "league": "SP2",
+      "fixture": "Cadiz v Leganes",
+      "market": "1x2",
+      "selection": "H",
+      "p_model": 0.3813945527163316,
+      "odds_available": 2.75,
+      "devigged_market_p": 0.33816000090051435,
+      "edge_pct": 4.883501996991191,
+      "lam": 1.1245063253833076,
+      "mu": 1.012806623687564
+    },
+    {
+      "kickoff": "2026-10-03",
+      "league": "SP2",
+      "fixture": "Almeria v Burgos",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.5641501127893211,
+      "odds_available": 1.85,
+      "devigged_market_p": 0.513157894736842,
+      "edge_pct": 4.367770866024423,
+      "lam": 1.3988396471638678,
+      "mu": 1.0224749824453787
+    }
+  ],
+  "running": {
+    "picks_total": 59,
+    "picks_with_clv": 50,
+    "mean_clv_fair_pct": -7.229,
+    "clv_ci95": [
+      -9.889,
+      -4.57
+    ],
+    "clv_verdict": "negative and significant",
+    "picks_settled": 50,
+    "paper_roi_pct": 11.22,
+    "hit_rate": 0.46
+  },
+  "gate_passed": false,
+  "notify_reasons": []
 }
