@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-02T11:02:17+00:00",
- "today": "2026-10-02",
- "fixtures": 11,
+ "generated": "2026-10-03T10:21:44+00:00",
+ "today": "2026-10-03",
+ "fixtures": 10,
  "divisions": 2,
- "market_lines": 902,
+ "market_lines": 820,
  "history_matches": 7110,
  "validation": {
   "shots": "marginal",
@@ -83,7 +83,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 656
+   "rows": 574
   }
  ]
 }
