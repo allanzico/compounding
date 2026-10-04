@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-03T10:21:44+00:00",
- "today": "2026-10-03",
- "fixtures": 10,
- "divisions": 2,
- "market_lines": 820,
- "history_matches": 7110,
+ "generated": "2026-10-04T11:05:20+00:00",
+ "today": "2026-10-04",
+ "fixtures": 4,
+ "divisions": 1,
+ "market_lines": 328,
+ "history_matches": 3311,
  "validation": {
   "shots": "marginal",
   "reds": "no better than league average",
@@ -17,60 +17,9 @@
  },
  "diagnostics": [
   {
-   "div": "E2",
-   "train": 3799,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 246
-  },
-  {
-   "div": "E3",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "EC",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "SC1",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "SC2",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "SC3",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
    "div": "SP2",
    "train": 3311,
    "skipped": [
-    "Sabadell v Andorra (6 eff. matches)",
     "Girona v Mallorca (6 eff. matches)",
     "Sp Gijon v Celta B (6 eff. matches)"
    ],
@@ -83,7 +32,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 328
   }
  ]
 }
