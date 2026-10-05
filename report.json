@@ -1,76 +1,47 @@
 {
-  "run_at": "2026-10-04T11:05:19+00:00",
-  "today": "2026-10-04",
+  "run_at": "2026-10-05T12:13:22+00:00",
+  "today": "2026-10-05",
   "notify": false,
   "errors": [],
-  "history_matches": 7110,
-  "history_with_closing": 7110,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 6,
+  "history_matches": 7123,
+  "history_with_closing": 7123,
+  "picks_settled_today": 18,
+  "fixtures_scanned": 1,
   "divisions_priced": [
     "SP2"
   ],
   "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 2,
-  "thin_teams": [
-    "Celta B (6.3 eff. matches)",
-    "Mallorca (6.3 eff. matches)"
-  ],
+  "fixtures_skipped_thin_ratings": 0,
+  "thin_teams": [],
   "implausible_edges_rejected": 0,
   "implausible_examples": [],
   "qualifying_picks": [
-    {
-      "kickoff": "2026-10-04",
-      "league": "SP2",
-      "fixture": "Castellon v Ceuta",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.12062968161796106,
-      "odds_available": 10.0,
-      "devigged_market_p": 0.07711159208436169,
-      "edge_pct": 20.62968161796106,
-      "lam": 2.4587624201589002,
-      "mu": 0.9125284563293428
-    },
-    {
-      "kickoff": "2026-10-04",
-      "league": "SP2",
-      "fixture": "Las Palmas v Valladolid",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.5188342402464302,
-      "odds_available": 2.15,
-      "devigged_market_p": 0.4387282732965967,
-      "edge_pct": 11.549361652982482,
-      "lam": 1.4942311841017726,
-      "mu": 0.8723006887384407
-    },
     {
       "kickoff": "2026-10-05",
       "league": "SP2",
       "fixture": "Cordoba v Tenerife",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.2689264581272494,
+      "p_model": 0.26539202877930806,
       "odds_available": 4.0,
       "devigged_market_p": 0.22496822502217062,
-      "edge_pct": 7.570583250899765,
-      "lam": 1.4671802702002887,
-      "mu": 1.0403455733428533
+      "edge_pct": 6.156811511723226,
+      "lam": 1.4571571298839219,
+      "mu": 1.029589388707462
     }
   ],
   "running": {
-    "picks_total": 71,
-    "picks_with_clv": 50,
-    "mean_clv_fair_pct": -7.229,
+    "picks_total": 72,
+    "picks_with_clv": 68,
+    "mean_clv_fair_pct": -9.173,
     "clv_ci95": [
-      -9.889,
-      -4.57
+      -11.576,
+      -6.769
     ],
     "clv_verdict": "negative and significant",
-    "picks_settled": 50,
-    "paper_roi_pct": 11.22,
-    "hit_rate": 0.46
+    "picks_settled": 68,
+    "paper_roi_pct": -4.691,
+    "hit_rate": 0.3971
   },
   "gate_passed": false,
   "notify_reasons": []
