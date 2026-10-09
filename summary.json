@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-05T12:13:25+00:00",
- "today": "2026-10-05",
- "fixtures": 1,
- "divisions": 1,
- "market_lines": 82,
- "history_matches": 3321,
+ "generated": "2026-10-09T11:50:10+00:00",
+ "today": "2026-10-09",
+ "fixtures": 108,
+ "divisions": 17,
+ "market_lines": 8856,
+ "history_matches": 43477,
  "validation": {
   "shots": "marginal",
   "reds": "no better than league average",
@@ -17,8 +17,272 @@
  },
  "diagnostics": [
   {
-   "div": "SP2",
-   "train": 3321,
+   "div": "B1",
+   "train": 2148,
+   "skipped": [
+    "Beveren v Lommel SK (6 eff. matches)",
+    "Genk v Kortrijk (10 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "D1",
+   "train": 2178,
+   "skipped": [
+    "Paderborn v Stuttgart (4 eff. matches)",
+    "Union Berlin v Elversberg (4 eff. matches)",
+    "Freiburg v Schalke 04 (4 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 492
+  },
+  {
+   "div": "D2",
+   "train": 2196,
+   "skipped": [
+    "Heidenheim v Kaiserslautern (5 eff. matches)",
+    "Darmstadt v Cottbus (5 eff. matches)",
+    "Osnabruck v Dresden (6 eff. matches)",
+    "Nurnberg v Wolfsburg (5 eff. matches)",
+    "St Pauli v Karlsruhe (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 328
+  },
+  {
+   "div": "E0",
+   "train": 2710,
+   "skipped": [
+    "Ipswich v Fulham (8 eff. matches)",
+    "Hull v Everton (4 eff. matches)",
+    "Coventry v Newcastle (4 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "E1",
+   "train": 3959,
+   "skipped": [
+    "West Ham v QPR (7 eff. matches)",
+    "Bolton v Stoke (7 eff. matches)",
+    "Sheffield United v Lincoln (7 eff. matches)",
+    "Middlesbrough v Wolves (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 656
+  },
+  {
+   "div": "E2",
+   "train": 3802,
+   "skipped": [
+    "Notts County v Oxford (6 eff. matches)",
+    "Milton Keynes Dons v Reading (6 eff. matches)",
+    "Mansfield v Bromley (6 eff. matches)",
+    "Leicester v Peterboro (6 eff. matches)",
+    "Huddersfield v Sheffield Weds (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "E3",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "EC",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "F1",
+   "train": 2382,
+   "skipped": [
+    "Paris SG v Le Mans (4 eff. matches)",
+    "Troyes v Marseille (5 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "F2",
+   "train": 2473,
+   "skipped": [
+    "Sochaux v Boulogne (6 eff. matches)",
+    "Nantes v Reims (6 eff. matches)",
+    "Dijon v Metz (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 492
+  },
+  {
+   "div": "G1",
+   "train": 1704,
+   "skipped": [
+    "Iraklis v Levadeiakos (4 eff. matches)",
+    "PAOK v Kalamata (4 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 410
+  },
+  {
+   "div": "I1",
+   "train": 2710,
+   "skipped": [
+    "Napoli v Frosinone (5 eff. matches)",
+    "Lazio v Monza (9 eff. matches)",
+    "Atalanta v Venezia (8 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "I2",
+   "train": 2710,
+   "skipped": [
+    "Arezzo v Cremonese (4 eff. matches)",
+    "Vicenza v Pisa (4 eff. matches)",
+    "Sudtirol v Ascoli (5 eff. matches)",
+    "Benevento v Cesena (5 eff. matches)",
+    "Modena v Verona (4 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 410
+  },
+  {
+   "div": "N1",
+   "train": 2131,
+   "skipped": [
+    "Utrecht v Willem II (9 eff. matches)",
+    "Telstar v Den Haag (6 eff. matches)",
+    "Zwolle v Cambuur (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 492
+  },
+  {
+   "div": "P1",
+   "train": 2204,
+   "skipped": [
+    "Maritimo v Porto (6 eff. matches)",
+    "Academico Viseu v Estoril (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "SC0",
+   "train": 1589,
    "skipped": [],
    "models": [
     "goals",
@@ -29,7 +293,86 @@
     "fouls",
     "yellows"
    ],
-   "rows": 82
+   "rows": 492
+  },
+  {
+   "div": "SC1",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SC2",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SC3",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SP1",
+   "train": 2729,
+   "skipped": [
+    "Malaga v Espanol (6 eff. matches)",
+    "Santander v Valencia (6 eff. matches)",
+    "Sociedad v La Coruna (6 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "SP2",
+   "train": 3322,
+   "skipped": [
+    "Celta B v Sociedad B (7 eff. matches)",
+    "Ceuta v Sabadell (7 eff. matches)",
+    "Mallorca v Las Palmas (7 eff. matches)",
+    "Tenerife v Girona (7 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 574
+  },
+  {
+   "div": "T1",
+   "train": 2530,
+   "skipped": [
+    "Genclerbirligi v Amedspor (5 eff. matches)",
+    "Alanyaspor v Erzurumspor (5 eff. matches)",
+    "Gaziantep v Corum (5 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 492
   }
  ]
 }
