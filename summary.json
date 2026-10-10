@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-09T11:50:10+00:00",
- "today": "2026-10-09",
- "fixtures": 108,
+ "generated": "2026-10-10T11:07:27+00:00",
+ "today": "2026-10-10",
+ "fixtures": 96,
  "divisions": 17,
- "market_lines": 8856,
+ "market_lines": 7872,
  "history_matches": 43477,
  "validation": {
   "shots": "marginal",
@@ -20,7 +20,6 @@
    "div": "B1",
    "train": 2148,
    "skipped": [
-    "Beveren v Lommel SK (6 eff. matches)",
     "Genk v Kortrijk (10 eff. matches)"
    ],
    "models": [
@@ -51,13 +50,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "D2",
    "train": 2196,
    "skipped": [
-    "Heidenheim v Kaiserslautern (5 eff. matches)",
     "Darmstadt v Cottbus (5 eff. matches)",
     "Osnabruck v Dresden (6 eff. matches)",
     "Nurnberg v Wolfsburg (5 eff. matches)",
@@ -72,7 +70,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 328
+   "rows": 246
   },
   {
    "div": "E0",
@@ -97,7 +95,6 @@
    "div": "E1",
    "train": 3959,
    "skipped": [
-    "West Ham v QPR (7 eff. matches)",
     "Bolton v Stoke (7 eff. matches)",
     "Sheffield United v Lincoln (7 eff. matches)",
     "Middlesbrough v Wolves (6 eff. matches)"
@@ -164,13 +161,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "F2",
    "train": 2473,
    "skipped": [
-    "Sochaux v Boulogne (6 eff. matches)",
     "Nantes v Reims (6 eff. matches)",
     "Dijon v Metz (6 eff. matches)"
    ],
@@ -183,7 +179,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 164
   },
   {
    "div": "G1",
@@ -241,7 +237,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 410
+   "rows": 328
   },
   {
    "div": "N1",
@@ -260,7 +256,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "P1",
@@ -278,7 +274,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 410
   },
   {
    "div": "SC0",
@@ -320,7 +316,6 @@
    "div": "SP1",
    "train": 2729,
    "skipped": [
-    "Malaga v Espanol (6 eff. matches)",
     "Santander v Valencia (6 eff. matches)",
     "Sociedad v La Coruna (6 eff. matches)"
    ],
@@ -372,7 +367,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   }
  ]
 }
