@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-11T11:22:42+00:00",
- "today": "2026-10-11",
- "fixtures": 41,
- "divisions": 15,
- "market_lines": 3362,
- "history_matches": 39675,
+ "generated": "2026-10-12T13:03:48+00:00",
+ "today": "2026-10-12",
+ "fixtures": 7,
+ "divisions": 5,
+ "market_lines": 574,
+ "history_matches": 20382,
  "validation": {
   "shots": "marginal",
   "reds": "no better than league average",
@@ -17,59 +17,9 @@
  },
  "diagnostics": [
   {
-   "div": "B1",
-   "train": 2148,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 328
-  },
-  {
-   "div": "D1",
-   "train": 2178,
-   "skipped": [
-    "Freiburg v Schalke 04 (4 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "D2",
-   "train": 2196,
-   "skipped": [
-    "St Pauli v Karlsruhe (6 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
    "div": "E0",
    "train": 2710,
    "skipped": [
-    "Hull v Everton (4 eff. matches)",
     "Coventry v Newcastle (4 eff. matches)"
    ],
    "models": [
@@ -81,39 +31,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 164
-  },
-  {
-   "div": "E1",
-   "train": 3959,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "F1",
-   "train": 2382,
-   "skipped": [
-    "Troyes v Marseille (5 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
+   "rows": 0
   },
   {
    "div": "F2",
@@ -136,7 +54,6 @@
    "div": "G1",
    "train": 1704,
    "skipped": [
-    "Iraklis v Levadeiakos (4 eff. matches)",
     "PAOK v Kalamata (4 eff. matches)"
    ],
    "models": [
@@ -148,50 +65,13 @@
     "fouls",
     "yellows"
    ],
-   "rows": 246
+   "rows": 0
   },
   {
    "div": "I1",
    "train": 2710,
    "skipped": [
-    "Lazio v Monza (9 eff. matches)",
     "Atalanta v Venezia (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 410
-  },
-  {
-   "div": "I2",
-   "train": 2710,
-   "skipped": [
-    "Modena v Verona (4 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
-   "div": "N1",
-   "train": 2131,
-   "skipped": [
-    "Utrecht v Willem II (9 eff. matches)",
-    "Telstar v Den Haag (6 eff. matches)",
-    "Zwolle v Cambuur (6 eff. matches)"
    ],
    "models": [
     "goals",
@@ -217,11 +97,11 @@
     "fouls",
     "yellows"
    ],
-   "rows": 328
+   "rows": 82
   },
   {
-   "div": "SC0",
-   "train": 1589,
+   "div": "SP1",
+   "train": 2729,
    "skipped": [],
    "models": [
     "goals",
@@ -232,31 +112,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 164
-  },
-  {
-   "div": "SP1",
-   "train": 2729,
-   "skipped": [
-    "Santander v Valencia (6 eff. matches)",
-    "Sociedad v La Coruna (6 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 246
+   "rows": 82
   },
   {
    "div": "SP2",
    "train": 3322,
    "skipped": [
-    "Mallorca v Las Palmas (7 eff. matches)",
     "Tenerife v Girona (7 eff. matches)"
    ],
    "models": [
@@ -268,14 +129,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 246
   },
   {
    "div": "T1",
    "train": 2530,
-   "skipped": [
-    "Gaziantep v Corum (5 eff. matches)"
-   ],
+   "skipped": [],
    "models": [
     "goals",
     "ht_goals",
@@ -285,7 +144,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 246
+   "rows": 82
   }
  ]
 }
