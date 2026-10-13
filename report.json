@@ -1,11 +1,11 @@
 {
-  "run_at": "2026-10-13T12:38:03+00:00",
+  "run_at": "2026-10-13T14:50:43+00:00",
   "today": "2026-10-13",
   "notify": false,
   "errors": [],
   "history_matches": 7785,
   "history_with_closing": 7785,
-  "picks_settled_today": 25,
+  "picks_settled_today": 0,
   "fixtures_scanned": 13,
   "divisions_priced": [
     "E1",
@@ -132,7 +132,7 @@
     }
   ],
   "running": {
-    "picks_total": 274,
+    "picks_total": 282,
     "picks_with_clv": 97,
     "mean_clv_fair_pct": -8.46,
     "clv_ci95": [
