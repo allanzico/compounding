@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-12T13:03:48+00:00",
- "today": "2026-10-12",
- "fixtures": 7,
- "divisions": 5,
- "market_lines": 574,
- "history_matches": 20382,
+ "generated": "2026-10-13T12:38:05+00:00",
+ "today": "2026-10-13",
+ "fixtures": 10,
+ "divisions": 1,
+ "market_lines": 820,
+ "history_matches": 7785,
  "validation": {
   "shots": "marginal",
   "reds": "no better than league average",
@@ -17,10 +17,28 @@
  },
  "diagnostics": [
   {
-   "div": "E0",
-   "train": 2710,
+   "div": "E1",
+   "train": 3971,
    "skipped": [
-    "Coventry v Newcastle (4 eff. matches)"
+    "Wolves v Bolton (7 eff. matches)",
+    "Lincoln v West Ham (8 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 820
+  },
+  {
+   "div": "E2",
+   "train": 3814,
+   "skipped": [
+    "Mansfield v Oxford (7 eff. matches)"
    ],
    "models": [
     "goals",
@@ -34,117 +52,11 @@
    "rows": 0
   },
   {
-   "div": "F2",
-   "train": 2473,
-   "skipped": [
-    "Dijon v Metz (6 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 0
-  },
-  {
-   "div": "G1",
-   "train": 1704,
-   "skipped": [
-    "PAOK v Kalamata (4 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 0
-  },
-  {
-   "div": "I1",
-   "train": 2710,
-   "skipped": [
-    "Atalanta v Venezia (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "P1",
-   "train": 2204,
+   "div": "SC1",
+   "train": 0,
    "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "SP1",
-   "train": 2729,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "SP2",
-   "train": 3322,
-   "skipped": [
-    "Tenerife v Girona (7 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 246
-  },
-  {
-   "div": "T1",
-   "train": 2530,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
+   "models": [],
+   "error": "only 0 training matches"
   }
  ]
 }
