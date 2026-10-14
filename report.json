@@ -1,108 +1,39 @@
 {
-  "run_at": "2026-10-13T14:50:43+00:00",
-  "today": "2026-10-13",
+  "run_at": "2026-10-14T10:04:44+00:00",
+  "today": "2026-10-14",
   "notify": false,
   "errors": [],
   "history_matches": 7785,
   "history_with_closing": 7785,
   "picks_settled_today": 0,
-  "fixtures_scanned": 13,
+  "fixtures_scanned": 5,
   "divisions_priced": [
     "E1",
     "E2"
   ],
-  "divisions_skipped": {
-    "SC1": "only 0 training matches"
-  },
-  "fixtures_skipped_thin_ratings": 3,
+  "divisions_skipped": {},
+  "fixtures_skipped_thin_ratings": 2,
   "thin_teams": [
     "Oxford (7.3 eff. matches)",
-    "West Ham (7.8 eff. matches)",
-    "Wolves (7.0 eff. matches)"
+    "West Ham (7.8 eff. matches)"
   ],
-  "implausible_edges_rejected": 2,
+  "implausible_edges_rejected": 1,
   "implausible_examples": [
-    "Cardiff v Watford (E1) A edge +30%",
     "QPR v Derby (E1) A edge +35%"
   ],
   "qualifying_picks": [
-    {
-      "kickoff": "2026-10-13",
-      "league": "E1",
-      "fixture": "Cardiff v Watford",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.46673350997431207,
-      "odds_available": 2.63,
-      "devigged_market_p": 0.36319612590799033,
-      "edge_pct": 22.750913123244064,
-      "lam": 1.6489417376791713,
-      "mu": 1.1624910399013069
-    },
-    {
-      "kickoff": "2026-10-13",
-      "league": "E1",
-      "fixture": "Birmingham v Preston",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.2109447146822902,
-      "odds_available": 5.75,
-      "devigged_market_p": 0.15256365666154548,
-      "edge_pct": 21.293210942316865,
-      "lam": 1.6531442225783841,
-      "mu": 0.9623760268006548
-    },
-    {
-      "kickoff": "2026-10-13",
-      "league": "E1",
-      "fixture": "Burnley v Charlton",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5948223568191375,
-      "odds_available": 2.0,
-      "devigged_market_p": 0.4805194805194806,
-      "edge_pct": 18.964471363827506,
-      "lam": 1.5502147656497167,
-      "mu": 0.7543755675924554
-    },
     {
       "kickoff": "2026-10-14",
       "league": "E1",
       "fixture": "Portsmouth v Sheffield United",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.3530488556554561,
+      "p_model": 0.3530351404322769,
       "odds_available": 3.2,
       "devigged_market_p": 0.2884178016957145,
-      "edge_pct": 12.975633809745958,
-      "lam": 1.3264066100550145,
-      "mu": 1.2979317132178458
-    },
-    {
-      "kickoff": "2026-10-13",
-      "league": "E1",
-      "fixture": "Bristol City v Blackburn",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5905050595633097,
-      "odds_available": 1.91,
-      "devigged_market_p": 0.5,
-      "edge_pct": 12.786466376592154,
-      "lam": 1.3429597469198415,
-      "mu": 0.977937313189715
-    },
-    {
-      "kickoff": "2026-10-13",
-      "league": "E1",
-      "fixture": "Stoke v Middlesbrough",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5185490722046724,
-      "odds_available": 2.1,
-      "devigged_market_p": 0.4516971279373368,
-      "edge_pct": 8.895305162981204,
-      "lam": 1.0505889938731547,
-      "mu": 1.5489366221526981
+      "edge_pct": 12.971244938328619,
+      "lam": 1.326424731946093,
+      "mu": 1.2978898508602232
     },
     {
       "kickoff": "2026-10-14",
@@ -110,29 +41,16 @@
       "fixture": "Norwich v Southampton",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.4194446556827787,
+      "p_model": 0.4194184861529515,
       "odds_available": 2.57,
       "devigged_market_p": 0.36066718412986865,
-      "edge_pct": 7.797276510474127,
-      "lam": 1.5619418803771357,
-      "mu": 1.7567985191291962
-    },
-    {
-      "kickoff": "2026-10-13",
-      "league": "E1",
-      "fixture": "Millwall v Swansea",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.4612702325825464,
-      "odds_available": 2.32,
-      "devigged_market_p": 0.40284645373520783,
-      "edge_pct": 7.014693959150753,
-      "lam": 1.4821752100875285,
-      "mu": 1.0545674937761347
+      "edge_pct": 7.790550941308538,
+      "lam": 1.5618828121452177,
+      "mu": 1.75663145724648
     }
   ],
   "running": {
-    "picks_total": 282,
+    "picks_total": 284,
     "picks_with_clv": 97,
     "mean_clv_fair_pct": -8.46,
     "clv_ci95": [

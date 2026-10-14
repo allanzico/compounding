@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-13T14:50:45+00:00",
- "today": "2026-10-13",
- "fixtures": 10,
+ "generated": "2026-10-14T10:04:47+00:00",
+ "today": "2026-10-14",
+ "fixtures": 3,
  "divisions": 1,
- "market_lines": 820,
+ "market_lines": 246,
  "history_matches": 7785,
  "validation": {
   "shots": "marginal",
@@ -20,7 +20,6 @@
    "div": "E1",
    "train": 3971,
    "skipped": [
-    "Wolves v Bolton (7 eff. matches)",
     "Lincoln v West Ham (8 eff. matches)"
    ],
    "models": [
@@ -32,7 +31,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 820
+   "rows": 246
   },
   {
    "div": "E2",
@@ -50,13 +49,6 @@
     "yellows"
    ],
    "rows": 0
-  },
-  {
-   "div": "SC1",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
   }
  ]
 }
