@@ -1,67 +1,39 @@
 {
-  "run_at": "2026-10-14T10:04:44+00:00",
-  "today": "2026-10-14",
-  "notify": false,
+  "run_at": "2026-10-15T09:48:36+00:00",
+  "today": "2026-10-15",
+  "notify": true,
   "errors": [],
-  "history_matches": 7785,
-  "history_with_closing": 7785,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 5,
+  "history_matches": 7797,
+  "history_with_closing": 7797,
+  "picks_settled_today": 18,
+  "fixtures_scanned": 1,
   "divisions_priced": [
-    "E1",
     "E2"
   ],
   "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 2,
+  "fixtures_skipped_thin_ratings": 1,
   "thin_teams": [
-    "Oxford (7.3 eff. matches)",
-    "West Ham (7.8 eff. matches)"
+    "Oxford (7.3 eff. matches)"
   ],
-  "implausible_edges_rejected": 1,
-  "implausible_examples": [
-    "QPR v Derby (E1) A edge +35%"
-  ],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-10-14",
-      "league": "E1",
-      "fixture": "Portsmouth v Sheffield United",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.3530351404322769,
-      "odds_available": 3.2,
-      "devigged_market_p": 0.2884178016957145,
-      "edge_pct": 12.971244938328619,
-      "lam": 1.326424731946093,
-      "mu": 1.2978898508602232
-    },
-    {
-      "kickoff": "2026-10-14",
-      "league": "E1",
-      "fixture": "Norwich v Southampton",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.4194184861529515,
-      "odds_available": 2.57,
-      "devigged_market_p": 0.36066718412986865,
-      "edge_pct": 7.790550941308538,
-      "lam": 1.5618828121452177,
-      "mu": 1.75663145724648
-    }
-  ],
+  "implausible_edges_rejected": 0,
+  "implausible_examples": [],
+  "qualifying_picks": [],
   "running": {
     "picks_total": 284,
-    "picks_with_clv": 97,
-    "mean_clv_fair_pct": -8.46,
+    "picks_with_clv": 115,
+    "mean_clv_fair_pct": -7.715,
     "clv_ci95": [
-      -10.3,
-      -6.62
+      -9.45,
+      -5.979
     ],
     "clv_verdict": "negative and significant",
-    "picks_settled": 97,
-    "paper_roi_pct": -3.99,
-    "hit_rate": 0.4227
+    "kill_criterion": "MET \u2014 115 picks with mean fair CLV -7.71%. Method v2 section 8 says stop.",
+    "picks_settled": 115,
+    "paper_roi_pct": -8.991,
+    "hit_rate": 0.4
   },
   "gate_passed": false,
-  "notify_reasons": []
+  "notify_reasons": [
+    "kill criterion met"
+  ]
 }
