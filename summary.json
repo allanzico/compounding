@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-16T09:41:41+00:00",
- "today": "2026-10-16",
- "fixtures": 94,
+ "generated": "2026-10-17T09:13:55+00:00",
+ "today": "2026-10-17",
+ "fixtures": 86,
  "divisions": 16,
- "market_lines": 7708,
+ "market_lines": 7052,
  "history_matches": 41491,
  "validation": {
   "shots": "marginal",
@@ -33,13 +33,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "D2",
    "train": 2205,
    "skipped": [
-    "Cottbus v Nurnberg (6 eff. matches)",
     "Hannover v St Pauli (7 eff. matches)",
     "Wolfsburg v Heidenheim (6 eff. matches)",
     "Bielefeld v Osnabruck (7 eff. matches)"
@@ -53,7 +52,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 410
+   "rows": 328
   },
   {
    "div": "E0",
@@ -78,7 +77,6 @@
    "div": "E1",
    "train": 3983,
    "skipped": [
-    "Burnley v Wolves (8 eff. matches)",
     "Millwall v Lincoln (9 eff. matches)",
     "Southampton v Bolton (9 eff. matches)",
     "Swansea v West Ham (9 eff. matches)"
@@ -126,8 +124,7 @@
    "div": "F1",
    "train": 2391,
    "skipped": [
-    "Le Mans v Toulouse (5 eff. matches)",
-    "Troyes v Lens (6 eff. matches)"
+    "Troyes v Lens (5 eff. matches)"
    ],
    "models": [
     "goals",
@@ -144,7 +141,6 @@
    "div": "F2",
    "train": 2482,
    "skipped": [
-    "Reims v Dijon (7 eff. matches)",
     "Nantes v Dunkerque (7 eff. matches)",
     "Metz v Sochaux (7 eff. matches)"
    ],
@@ -157,7 +153,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 164
   },
   {
    "div": "G1",
@@ -181,7 +177,6 @@
    "div": "I1",
    "train": 2720,
    "skipped": [
-    "Frosinone v Sassuolo (6 eff. matches)",
     "Venezia v Napoli (9 eff. matches)",
     "Monza v Cagliari (10 eff. matches)"
    ],
@@ -200,7 +195,6 @@
    "div": "I2",
    "train": 2720,
    "skipped": [
-    "Verona v Catanzaro (5 eff. matches)",
     "Ascoli v Empoli (6 eff. matches)",
     "Pisa v Cremonese (9 eff. matches)",
     "Benevento v Vicenza (5 eff. matches)",
@@ -234,7 +228,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "P1",
@@ -291,7 +285,6 @@
    "div": "SP1",
    "train": 2738,
    "skipped": [
-    "La Coruna v Levante (7 eff. matches)",
     "Malaga v Sociedad (7 eff. matches)",
     "Osasuna v Santander (7 eff. matches)"
    ],
@@ -324,13 +317,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "T1",
    "train": 2539,
    "skipped": [
-    "Corum v Rizespor (6 eff. matches)",
     "Erzurumspor v Eyupspor (6 eff. matches)",
     "Amedspor v Konyaspor (6 eff. matches)"
    ],
