@@ -435,3 +435,6 @@ date_taken,kickoff,league,fixture,market,selection,p_model,odds_available,fair_o
 2026-10-18T09:29:44+00:00,2026-10-18,I2,Cesena v Avellino,over_under,UNDER,0.548339,1.9,1.8237,4.184,0.5,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-18"
 2026-10-18T09:29:44+00:00,2026-10-18,D2,Dresden v Magdeburg,1x2,H,0.425002,2.45,2.3529,4.125,0.381189,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-18"
 2026-10-18T09:29:44+00:00,2026-10-18,D2,Karlsruhe v Darmstadt,over_under,UNDER,0.385306,2.7,2.5953,4.032,0.347826,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-18"
+2026-10-19T10:44:10+00:00,2026-10-19,P1,Sp Braga v Gil Vicente,1x2,A,0.209951,5.75,4.763,20.722,0.149537,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-19"
+2026-10-19T10:44:10+00:00,2026-10-19,T1,Trabzonspor v Besiktas,1x2,H,0.427499,2.75,2.3392,17.562,0.325649,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-19"
+2026-10-19T10:44:10+00:00,2026-10-19,SP1,Getafe v Vallecano,over_under,UNDER,0.772393,1.5,1.2947,15.859,0.636804,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-19"
