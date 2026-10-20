@@ -1,86 +1,32 @@
 {
-  "run_at": "2026-10-19T10:44:07+00:00",
-  "today": "2026-10-19",
+  "run_at": "2026-10-20T09:58:48+00:00",
+  "today": "2026-10-20",
   "notify": false,
   "errors": [],
-  "history_matches": 41491,
-  "history_with_closing": 41452,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 8,
-  "divisions_priced": [
-    "E0",
-    "F2",
-    "I1",
-    "P1",
-    "SP1",
-    "SP2",
-    "T1"
-  ],
+  "history_matches": 41633,
+  "history_with_closing": 41594,
+  "picks_settled_today": 155,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
   "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 3,
-  "thin_teams": [
-    "Celta B (7.9 eff. matches)",
-    "Coventry (5.2 eff. matches)",
-    "Monza (9.5 eff. matches)"
-  ],
-  "implausible_edges_rejected": 1,
-  "implausible_examples": [
-    "Rodez v Montpellier (F2) UNDER edge +26%"
-  ],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-10-19",
-      "league": "P1",
-      "fixture": "Sp Braga v Gil Vicente",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.2099510167522355,
-      "odds_available": 5.75,
-      "devigged_market_p": 0.14953692725345324,
-      "edge_pct": 20.72183463253541,
-      "lam": 1.5864690353010236,
-      "mu": 0.8641704686972783
-    },
-    {
-      "kickoff": "2026-10-19",
-      "league": "T1",
-      "fixture": "Trabzonspor v Besiktas",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.4274989886144797,
-      "odds_available": 2.75,
-      "devigged_market_p": 0.3256485010347031,
-      "edge_pct": 17.56222186898193,
-      "lam": 1.5985997370263934,
-      "mu": 1.3314226441926231
-    },
-    {
-      "kickoff": "2026-10-19",
-      "league": "SP1",
-      "fixture": "Getafe v Vallecano",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.7723933327543819,
-      "odds_available": 1.5,
-      "devigged_market_p": 0.6368038740920097,
-      "edge_pct": 15.858999913157291,
-      "lam": 0.8618439579497922,
-      "mu": 0.7803725263853885
-    }
-  ],
+  "fixtures_skipped_thin_ratings": 0,
+  "thin_teams": [],
+  "implausible_edges_rejected": 0,
+  "implausible_examples": [],
+  "qualifying_picks": [],
   "running": {
     "picks_total": 439,
-    "picks_with_clv": 274,
-    "mean_clv_fair_pct": -7.11,
+    "picks_with_clv": 429,
+    "mean_clv_fair_pct": -6.654,
     "clv_ci95": [
-      -8.249,
-      -5.97
+      -7.526,
+      -5.782
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 274 picks with mean fair CLV -7.11%. Method v2 section 8 says stop.",
-    "picks_settled": 274,
-    "paper_roi_pct": -6.777,
-    "hit_rate": 0.3869
+    "kill_criterion": "MET \u2014 429 picks with mean fair CLV -6.65%. Method v2 section 8 says stop.",
+    "picks_settled": 429,
+    "paper_roi_pct": -1.618,
+    "hit_rate": 0.3823
   },
   "gate_passed": false,
   "notify_reasons": []
