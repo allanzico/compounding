@@ -1,73 +1,24 @@
 {
- "generated": "2026-10-19T10:44:14+00:00",
- "today": "2026-10-19",
- "fixtures": 5,
- "divisions": 5,
- "market_lines": 410,
- "history_matches": 18745,
+ "generated": "2026-10-21T10:02:25+00:00",
+ "today": "2026-10-21",
+ "fixtures": 2,
+ "divisions": 2,
+ "market_lines": 164,
+ "history_matches": 6574,
  "validation": {
-  "shots": "marginal",
-  "reds": "no better than league average",
-  "fouls": "beats league average",
-  "sot": "beats league average",
-  "yellows": "no better than league average",
   "corners": "no better than league average",
-  "ht_goals": "no better than league average",
-  "goals": "no better than league average"
+  "sot": "beats league average",
+  "fouls": "beats league average",
+  "reds": "no better than league average",
+  "goals": "no better than league average",
+  "yellows": "no better than league average",
+  "shots": "marginal",
+  "ht_goals": "no better than league average"
  },
  "diagnostics": [
   {
-   "div": "E0",
-   "train": 2720,
-   "skipped": [
-    "Tottenham v Coventry (5 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 0
-  },
-  {
-   "div": "F2",
-   "train": 2482,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "I1",
-   "train": 2720,
-   "skipped": [
-    "Monza v Cagliari (9 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "P1",
-   "train": 2213,
+   "div": "E2",
+   "train": 3826,
    "skipped": [],
    "models": [
     "goals",
@@ -82,39 +33,7 @@
   },
   {
    "div": "SP1",
-   "train": 2738,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "SP2",
-   "train": 3333,
-   "skipped": [
-    "Celta B v Tenerife (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 0
-  },
-  {
-   "div": "T1",
-   "train": 2539,
+   "train": 2748,
    "skipped": [],
    "models": [
     "goals",

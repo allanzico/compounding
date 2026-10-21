@@ -1,21 +1,40 @@
 {
-  "run_at": "2026-10-20T09:58:48+00:00",
-  "today": "2026-10-20",
+  "run_at": "2026-10-21T10:02:22+00:00",
+  "today": "2026-10-21",
   "notify": false,
   "errors": [],
-  "history_matches": 41633,
-  "history_with_closing": 41594,
-  "picks_settled_today": 155,
-  "fixtures_scanned": 0,
-  "divisions_priced": [],
+  "history_matches": 10569,
+  "history_with_closing": 10569,
+  "picks_settled_today": 0,
+  "fixtures_scanned": 2,
+  "divisions_priced": [
+    "E2",
+    "SP1"
+  ],
   "divisions_skipped": {},
   "fixtures_skipped_thin_ratings": 0,
   "thin_teams": [],
-  "implausible_edges_rejected": 0,
-  "implausible_examples": [],
-  "qualifying_picks": [],
+  "implausible_edges_rejected": 1,
+  "implausible_examples": [
+    "Levante v Ath Bilbao (SP1) H edge +34%"
+  ],
+  "qualifying_picks": [
+    {
+      "kickoff": "2026-10-21",
+      "league": "E2",
+      "fixture": "Reading v Leyton Orient",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.22507525097112474,
+      "odds_available": 5.5,
+      "devigged_market_p": 0.15394543684333864,
+      "edge_pct": 23.791388034118597,
+      "lam": 1.823242372070972,
+      "mu": 1.0987762913095516
+    }
+  ],
   "running": {
-    "picks_total": 439,
+    "picks_total": 440,
     "picks_with_clv": 429,
     "mean_clv_fair_pct": -6.654,
     "clv_ci95": [
