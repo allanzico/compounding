@@ -438,4 +438,4 @@ date_taken,kickoff,league,fixture,market,selection,p_model,odds_available,fair_o
 2026-10-19T10:44:10+00:00,2026-10-19,P1,Sp Braga v Gil Vicente,1x2,A,0.209951,5.75,4.763,20.722,0.149537,4.75,5.4316,21.053,5.862,win,0.0,4.75,"cbets daily run, football-data.co.uk via repo, 2026-10-19"
 2026-10-19T10:44:10+00:00,2026-10-19,T1,Trabzonspor v Besiktas,1x2,H,0.427499,2.75,2.3392,17.562,0.325649,2.5,2.7462,10.0,0.137,win,0.0,1.75,"cbets daily run, football-data.co.uk via repo, 2026-10-19"
 2026-10-19T10:44:10+00:00,2026-10-19,SP1,Getafe v Vallecano,over_under,UNDER,0.772393,1.5,1.2947,15.859,0.636804,1.44,1.5236,4.167,-1.551,win,0.0,0.5,"cbets daily run, football-data.co.uk via repo, 2026-10-19"
-2026-10-21T10:02:23+00:00,2026-10-21,E2,Reading v Leyton Orient,1x2,A,0.225075,5.5,4.443,23.791,0.153945,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-10-21"
+2026-10-21T10:02:23+00:00,2026-10-21,E2,Reading v Leyton Orient,1x2,A,0.225075,5.5,4.443,23.791,0.153945,5.25,6.1339,4.762,-10.335,loss,0.0,-1.0,"cbets daily run, football-data.co.uk via repo, 2026-10-21"

@@ -1,51 +1,32 @@
 {
-  "run_at": "2026-10-21T10:02:22+00:00",
-  "today": "2026-10-21",
+  "run_at": "2026-10-22T10:03:41+00:00",
+  "today": "2026-10-22",
   "notify": false,
   "errors": [],
-  "history_matches": 10569,
-  "history_with_closing": 10569,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 2,
-  "divisions_priced": [
-    "E2",
-    "SP1"
-  ],
+  "history_matches": 10583,
+  "history_with_closing": 10583,
+  "picks_settled_today": 1,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
   "divisions_skipped": {},
   "fixtures_skipped_thin_ratings": 0,
   "thin_teams": [],
-  "implausible_edges_rejected": 1,
-  "implausible_examples": [
-    "Levante v Ath Bilbao (SP1) H edge +34%"
-  ],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-10-21",
-      "league": "E2",
-      "fixture": "Reading v Leyton Orient",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.22507525097112474,
-      "odds_available": 5.5,
-      "devigged_market_p": 0.15394543684333864,
-      "edge_pct": 23.791388034118597,
-      "lam": 1.823242372070972,
-      "mu": 1.0987762913095516
-    }
-  ],
+  "implausible_edges_rejected": 0,
+  "implausible_examples": [],
+  "qualifying_picks": [],
   "running": {
     "picks_total": 440,
-    "picks_with_clv": 429,
-    "mean_clv_fair_pct": -6.654,
+    "picks_with_clv": 430,
+    "mean_clv_fair_pct": -6.663,
     "clv_ci95": [
-      -7.526,
-      -5.782
+      -7.533,
+      -5.793
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 429 picks with mean fair CLV -6.65%. Method v2 section 8 says stop.",
-    "picks_settled": 429,
-    "paper_roi_pct": -1.618,
-    "hit_rate": 0.3823
+    "kill_criterion": "MET \u2014 430 picks with mean fair CLV -6.66%. Method v2 section 8 says stop.",
+    "picks_settled": 430,
+    "paper_roi_pct": -1.847,
+    "hit_rate": 0.3814
   },
   "gate_passed": false,
   "notify_reasons": []
