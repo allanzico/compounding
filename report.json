@@ -1,136 +1,32 @@
 {
-  "run_at": "2026-10-26T10:59:31+00:00",
-  "today": "2026-10-26",
+  "run_at": "2026-10-27T10:25:24+00:00",
+  "today": "2026-10-27",
   "notify": false,
   "errors": [],
-  "history_matches": 43804,
-  "history_with_closing": 43765,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 9,
-  "divisions_priced": [
-    "F1",
-    "F2",
-    "P1",
-    "SP1",
-    "SP2",
-    "T1"
-  ],
-  "divisions_skipped": {
-    "E3": "only 0 training matches"
-  },
+  "history_matches": 43963,
+  "history_with_closing": 43924,
+  "picks_settled_today": 106,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
+  "divisions_skipped": {},
   "fixtures_skipped_thin_ratings": 0,
   "thin_teams": [],
-  "implausible_edges_rejected": 2,
-  "implausible_examples": [
-    "Santa Clara v Benfica (P1) H edge +65%",
-    "Besiktas v Buyuksehyr (T1) A edge +66%"
-  ],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-10-26",
-      "league": "F2",
-      "fixture": "Montpellier v Red Star",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.6396213671351589,
-      "odds_available": 1.95,
-      "devigged_market_p": 0.48684210526315796,
-      "edge_pct": 24.72616659135598,
-      "lam": 1.2102401414385797,
-      "mu": 0.9268683831148645
-    },
-    {
-      "kickoff": "2026-10-26",
-      "league": "T1",
-      "fixture": "Besiktas v Buyuksehyr",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.4297489090651997,
-      "odds_available": 2.88,
-      "devigged_market_p": 0.32710280373831774,
-      "edge_pct": 23.767685810777508,
-      "lam": 1.8057700400697998,
-      "mu": 1.165102142976579
-    },
-    {
-      "kickoff": "2026-10-26",
-      "league": "SP2",
-      "fixture": "Andorra v Burgos",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.3003327153130013,
-      "odds_available": 4.0,
-      "devigged_market_p": 0.22540249863390224,
-      "edge_pct": 20.133086125200528,
-      "lam": 1.1679871854397887,
-      "mu": 0.960470622322052
-    },
-    {
-      "kickoff": "2026-10-26",
-      "league": "SP1",
-      "fixture": "Sevilla v Osasuna",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.28331611024907066,
-      "odds_available": 4.2,
-      "devigged_market_p": 0.22162820570703362,
-      "edge_pct": 18.992766304609688,
-      "lam": 1.5069330023496774,
-      "mu": 1.1542082979708113
-    },
-    {
-      "kickoff": "2026-10-26",
-      "league": "F1",
-      "fixture": "Paris SG v Lyon",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.3909477392141242,
-      "odds_available": 3.0,
-      "devigged_market_p": 0.3181818181818181,
-      "edge_pct": 17.28432176423724,
-      "lam": 2.103785151497064,
-      "mu": 1.0438352027100382
-    },
-    {
-      "kickoff": "2026-10-26",
-      "league": "P1",
-      "fixture": "Santa Clara v Benfica",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.573781129742192,
-      "odds_available": 1.95,
-      "devigged_market_p": 0.48684210526315796,
-      "edge_pct": 11.887320299727433,
-      "lam": 0.7727447762195648,
-      "mu": 1.611690611548337
-    },
-    {
-      "kickoff": "2026-10-26",
-      "league": "T1",
-      "fixture": "Galatasaray v Fenerbahce",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.5110765002940768,
-      "odds_available": 2.15,
-      "devigged_market_p": 0.43221740533964426,
-      "edge_pct": 9.881447563226509,
-      "lam": 2.1493246321176733,
-      "mu": 1.5380412252808313
-    }
-  ],
+  "implausible_edges_rejected": 0,
+  "implausible_examples": [],
+  "qualifying_picks": [],
   "running": {
     "picks_total": 546,
-    "picks_with_clv": 438,
-    "mean_clv_fair_pct": -6.621,
+    "picks_with_clv": 544,
+    "mean_clv_fair_pct": -6.461,
     "clv_ci95": [
-      -7.476,
-      -5.767
+      -7.226,
+      -5.695
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 438 picks with mean fair CLV -6.62%. Method v2 section 8 says stop.",
-    "picks_settled": 438,
-    "paper_roi_pct": -2.269,
-    "hit_rate": 0.3813
+    "kill_criterion": "MET \u2014 544 picks with mean fair CLV -6.46%. Method v2 section 8 says stop.",
+    "picks_settled": 544,
+    "paper_roi_pct": -2.84,
+    "hit_rate": 0.3768
   },
   "gate_passed": false,
   "notify_reasons": []
