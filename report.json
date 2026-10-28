@@ -1,21 +1,128 @@
 {
-  "run_at": "2026-10-27T10:25:24+00:00",
-  "today": "2026-10-27",
+  "run_at": "2026-10-28T11:15:18+00:00",
+  "today": "2026-10-28",
   "notify": false,
   "errors": [],
-  "history_matches": 43963,
-  "history_with_closing": 43924,
-  "picks_settled_today": 106,
-  "fixtures_scanned": 0,
-  "divisions_priced": [],
-  "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 0,
-  "thin_teams": [],
-  "implausible_edges_rejected": 0,
-  "implausible_examples": [],
-  "qualifying_picks": [],
+  "history_matches": 10937,
+  "history_with_closing": 10929,
+  "picks_settled_today": 0,
+  "fixtures_scanned": 16,
+  "divisions_priced": [
+    "I1",
+    "I2",
+    "SC0"
+  ],
+  "divisions_skipped": {
+    "EC": "only 0 training matches"
+  },
+  "fixtures_skipped_thin_ratings": 3,
+  "thin_teams": [
+    "Arezzo (7.0 eff. matches)",
+    "Frosinone (7.7 eff. matches)",
+    "Verona (7.0 eff. matches)"
+  ],
+  "implausible_edges_rejected": 4,
+  "implausible_examples": [
+    "Milan v Bologna (I1) A edge +51%",
+    "Fiorentina v Atalanta (I1) A edge +32%",
+    "Hearts v Rangers (SC0) H edge +29%",
+    "St Mirren v Hibernian (SC0) UNDER edge +26%"
+  ],
+  "qualifying_picks": [
+    {
+      "kickoff": "2026-10-29",
+      "league": "I1",
+      "fixture": "Fiorentina v Atalanta",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.48787046298649783,
+      "odds_available": 2.3,
+      "devigged_market_p": 0.413265306122449,
+      "edge_pct": 12.210206486894503,
+      "lam": 1.2537467631340022,
+      "mu": 1.4698160199922385
+    },
+    {
+      "kickoff": "2026-10-28",
+      "league": "SC0",
+      "fixture": "St Johnstone v Motherwell",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.43384019970444165,
+      "odds_available": 2.57,
+      "devigged_market_p": 0.3608605618616068,
+      "edge_pct": 11.496931324041505,
+      "lam": 1.1338000828448282,
+      "mu": 1.404494437014306
+    },
+    {
+      "kickoff": "2026-10-28",
+      "league": "SC0",
+      "fixture": "Aberdeen v Falkirk",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.31715904213864193,
+      "odds_available": 3.5,
+      "devigged_market_p": 0.26131342686877945,
+      "edge_pct": 11.00566474852467,
+      "lam": 1.4003701566051556,
+      "mu": 1.1729388347676861
+    },
+    {
+      "kickoff": "2026-10-28",
+      "league": "I1",
+      "fixture": "Genoa v Juventus",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.6414635744420827,
+      "odds_available": 1.73,
+      "devigged_market_p": 0.5483028720626633,
+      "edge_pct": 10.973198378480298,
+      "lam": 0.7344011467021523,
+      "mu": 1.395872585457465
+    },
+    {
+      "kickoff": "2026-10-28",
+      "league": "I1",
+      "fixture": "Venezia v Inter",
+      "market": "1x2",
+      "selection": "A",
+      "p_model": 0.787675305893835,
+      "odds_available": 1.36,
+      "devigged_market_p": 0.7126889209031162,
+      "edge_pct": 7.123841601561565,
+      "lam": 0.9757213912614907,
+      "mu": 3.054125536601676
+    },
+    {
+      "kickoff": "2026-10-28",
+      "league": "I1",
+      "fixture": "Milan v Bologna",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.5331369243886115,
+      "odds_available": 2.0,
+      "devigged_market_p": 0.4805194805194806,
+      "edge_pct": 6.627384877722298,
+      "lam": 1.5085125517991942,
+      "mu": 1.0332868036256344
+    },
+    {
+      "kickoff": "2026-10-28",
+      "league": "I1",
+      "fixture": "Parma v Udinese",
+      "market": "over_under",
+      "selection": "UNDER",
+      "p_model": 0.6311777776497067,
+      "odds_available": 1.67,
+      "devigged_market_p": 0.5684754521963824,
+      "edge_pct": 5.406688867501019,
+      "lam": 1.0279065502340012,
+      "mu": 1.1405713266507398
+    }
+  ],
   "running": {
-    "picks_total": 546,
+    "picks_total": 553,
     "picks_with_clv": 544,
     "mean_clv_fair_pct": -6.461,
     "clv_ci95": [

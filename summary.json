@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-26T10:59:38+00:00",
- "today": "2026-10-26",
- "fixtures": 9,
- "divisions": 6,
- "market_lines": 738,
- "history_matches": 15746,
+ "generated": "2026-10-28T11:15:20+00:00",
+ "today": "2026-10-28",
+ "fixtures": 13,
+ "divisions": 3,
+ "market_lines": 1066,
+ "history_matches": 7087,
  "validation": {
   "shots": "marginal",
   "reds": "no better than league average",
@@ -17,16 +17,36 @@
  },
  "diagnostics": [
   {
-   "div": "E3",
+   "div": "EC",
    "train": 0,
    "skipped": [],
    "models": [],
    "error": "only 0 training matches"
   },
   {
-   "div": "F1",
-   "train": 2400,
-   "skipped": [],
+   "div": "I1",
+   "train": 2740,
+   "skipped": [
+    "Frosinone v Lecce (8 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 492
+  },
+  {
+   "div": "I2",
+   "train": 2740,
+   "skipped": [
+    "Juve Stabia v Verona (7 eff. matches)",
+    "Carrarese v Arezzo (7 eff. matches)"
+   ],
    "models": [
     "goals",
     "ht_goals",
@@ -39,8 +59,8 @@
    "rows": 82
   },
   {
-   "div": "F2",
-   "train": 2491,
+   "div": "SC0",
+   "train": 1607,
    "skipped": [],
    "models": [
     "goals",
@@ -51,67 +71,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 164
-  },
-  {
-   "div": "P1",
-   "train": 2214,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "SP1",
-   "train": 2749,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "SP2",
-   "train": 3344,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "T1",
-   "train": 2548,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 246
+   "rows": 492
   }
  ]
 }
