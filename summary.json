@@ -1,31 +1,24 @@
 {
- "generated": "2026-10-28T11:15:20+00:00",
- "today": "2026-10-28",
- "fixtures": 13,
- "divisions": 3,
- "market_lines": 1066,
- "history_matches": 7087,
+ "generated": "2026-10-29T11:28:05+00:00",
+ "today": "2026-10-29",
+ "fixtures": 1,
+ "divisions": 1,
+ "market_lines": 82,
+ "history_matches": 2748,
  "validation": {
-  "shots": "marginal",
-  "reds": "no better than league average",
-  "fouls": "beats league average",
-  "sot": "beats league average",
   "yellows": "no better than league average",
+  "fouls": "beats league average",
   "corners": "no better than league average",
   "ht_goals": "no better than league average",
-  "goals": "no better than league average"
+  "goals": "no better than league average",
+  "shots": "marginal",
+  "sot": "beats league average",
+  "reds": "no better than league average"
  },
  "diagnostics": [
   {
-   "div": "EC",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
    "div": "I1",
-   "train": 2740,
+   "train": 2748,
    "skipped": [
     "Frosinone v Lecce (8 eff. matches)"
    ],
@@ -38,40 +31,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
-  },
-  {
-   "div": "I2",
-   "train": 2740,
-   "skipped": [
-    "Juve Stabia v Verona (7 eff. matches)",
-    "Carrarese v Arezzo (7 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
    "rows": 82
-  },
-  {
-   "div": "SC0",
-   "train": 1607,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 492
   }
  ]
 }
