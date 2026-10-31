@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-30T11:20:09+00:00",
- "today": "2026-10-30",
- "fixtures": 122,
+ "generated": "2026-10-31T10:52:27+00:00",
+ "today": "2026-10-31",
+ "fixtures": 110,
  "divisions": 17,
- "market_lines": 10004,
+ "market_lines": 9020,
  "history_matches": 43994,
  "validation": {
   "yellows": "no better than league average",
@@ -32,13 +32,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "D1",
    "train": 2205,
    "skipped": [
-    "Elversberg v Mainz (6 eff. matches)",
     "M'gladbach v Paderborn (6 eff. matches)",
     "Schalke 04 v RB Leipzig (6 eff. matches)"
    ],
@@ -57,7 +56,6 @@
    "div": "D2",
    "train": 2223,
    "skipped": [
-    "Cottbus v Bochum (8 eff. matches)",
     "Karlsruhe v Heidenheim (8 eff. matches)",
     "Wolfsburg v Osnabruck (8 eff. matches)",
     "St Pauli v Nurnberg (8 eff. matches)"
@@ -71,7 +69,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 410
+   "rows": 328
   },
   {
    "div": "E0",
@@ -104,7 +102,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 984
+   "rows": 902
   },
   {
    "div": "E2",
@@ -152,14 +150,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 656
+   "rows": 410
   },
   {
    "div": "F2",
    "train": 2500,
    "skipped": [
-    "Grenoble v Dijon (9 eff. matches)",
-    "Nantes v Clermont (8 eff. matches)",
     "Reims v Sochaux (9 eff. matches)"
    ],
    "models": [
@@ -171,7 +167,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 246
   },
   {
    "div": "G1",
@@ -261,7 +257,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "SC0",
@@ -303,9 +299,9 @@
    "div": "SP1",
    "train": 2759,
    "skipped": [
-    "Betis v Malaga (9 eff. matches)",
-    "Santander v Real Madrid (9 eff. matches)",
-    "La Coruna v Osasuna (9 eff. matches)"
+    "Betis v Malaga (8 eff. matches)",
+    "Santander v Real Madrid (8 eff. matches)",
+    "La Coruna v Osasuna (8 eff. matches)"
    ],
    "models": [
     "goals",
@@ -316,13 +312,13 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "SP2",
    "train": 3355,
    "skipped": [
-    "Sociedad B v Girona (10 eff. matches)",
+    "Sociedad B v Girona (9 eff. matches)",
     "Celta B v Cordoba (9 eff. matches)",
     "Albacete v Sabadell (9 eff. matches)",
     "Mallorca v Cadiz (9 eff. matches)"
@@ -354,7 +350,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   }
  ]
 }
