@@ -1,26 +1,25 @@
 {
- "generated": "2026-10-31T10:52:27+00:00",
- "today": "2026-10-31",
- "fixtures": 110,
- "divisions": 17,
- "market_lines": 9020,
- "history_matches": 43994,
+ "generated": "2026-11-01T11:47:44+00:00",
+ "today": "2026-11-01",
+ "fixtures": 50,
+ "divisions": 16,
+ "market_lines": 4100,
+ "history_matches": 39986,
  "validation": {
-  "yellows": "no better than league average",
-  "fouls": "beats league average",
-  "corners": "no better than league average",
-  "ht_goals": "no better than league average",
-  "goals": "no better than league average",
   "shots": "marginal",
+  "fouls": "beats league average",
+  "goals": "no better than league average",
   "sot": "beats league average",
-  "reds": "no better than league average"
+  "reds": "no better than league average",
+  "ht_goals": "no better than league average",
+  "corners": "no better than league average",
+  "yellows": "no better than league average"
  },
  "diagnostics": [
   {
    "div": "B1",
    "train": 2165,
    "skipped": [
-    "Beveren v St. Gilloise (7 eff. matches)",
     "Lommel SK v Gent (7 eff. matches)"
    ],
    "models": [
@@ -32,15 +31,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 246
   },
   {
    "div": "D1",
    "train": 2205,
-   "skipped": [
-    "M'gladbach v Paderborn (6 eff. matches)",
-    "Schalke 04 v RB Leipzig (6 eff. matches)"
-   ],
+   "skipped": [],
    "models": [
     "goals",
     "ht_goals",
@@ -50,14 +46,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 164
   },
   {
    "div": "D2",
    "train": 2223,
    "skipped": [
-    "Karlsruhe v Heidenheim (8 eff. matches)",
-    "Wolfsburg v Osnabruck (8 eff. matches)",
     "St Pauli v Nurnberg (8 eff. matches)"
    ],
    "models": [
@@ -69,29 +63,11 @@
     "fouls",
     "yellows"
    ],
-   "rows": 328
+   "rows": 164
   },
   {
    "div": "E0",
    "train": 2740,
-   "skipped": [
-    "Hull v Ipswich (7 eff. matches)",
-    "Coventry v Sunderland (7 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 656
-  },
-  {
-   "div": "E1",
-   "train": 4008,
    "skipped": [],
    "models": [
     "goals",
@@ -102,14 +78,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 902
+   "rows": 164
   },
   {
    "div": "E2",
    "train": 3855,
-   "skipped": [
-    "Mansfield v Notts County (9 eff. matches)"
-   ],
+   "skipped": [],
    "models": [
     "goals",
     "ht_goals",
@@ -119,28 +93,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 902
-  },
-  {
-   "div": "E3",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "EC",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
+   "rows": 82
   },
   {
    "div": "F1",
    "train": 2409,
-   "skipped": [
-    "Troyes v Le Mans (7 eff. matches)"
-   ],
+   "skipped": [],
    "models": [
     "goals",
     "ht_goals",
@@ -167,7 +125,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 246
+   "rows": 82
   },
   {
    "div": "G1",
@@ -184,7 +142,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "I1",
@@ -201,13 +159,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 738
+   "rows": 492
   },
   {
    "div": "I2",
    "train": 2750,
    "skipped": [
-    "Cremonese v Benevento (8 eff. matches)",
     "Verona v Carrarese (8 eff. matches)",
     "Arezzo v Ascoli (8 eff. matches)",
     "Palermo v Vicenza (8 eff. matches)"
@@ -221,13 +178,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 164
   },
   {
    "div": "N1",
    "train": 2158,
    "skipped": [
-    "Cambuur v Go Ahead Eagles (9 eff. matches)",
     "Zwolle v Den Haag (8 eff. matches)"
    ],
    "models": [
@@ -239,7 +195,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 246
   },
   {
    "div": "P1",
@@ -257,7 +213,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 328
   },
   {
    "div": "SC0",
@@ -272,34 +228,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 246
-  },
-  {
-   "div": "SC1",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "SC2",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "SC3",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
+   "rows": 82
   },
   {
    "div": "SP1",
    "train": 2759,
    "skipped": [
-    "Betis v Malaga (8 eff. matches)",
     "Santander v Real Madrid (8 eff. matches)",
     "La Coruna v Osasuna (8 eff. matches)"
    ],
@@ -312,15 +246,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 246
   },
   {
    "div": "SP2",
    "train": 3355,
    "skipped": [
-    "Sociedad B v Girona (9 eff. matches)",
-    "Celta B v Cordoba (9 eff. matches)",
-    "Albacete v Sabadell (9 eff. matches)",
     "Mallorca v Cadiz (9 eff. matches)"
    ],
    "models": [
@@ -332,13 +263,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "T1",
    "train": 2557,
    "skipped": [
-    "Erzurumspor v Corum (8 eff. matches)",
     "Amedspor v Eyupspor (8 eff. matches)"
    ],
    "models": [
@@ -350,7 +280,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 328
   }
  ]
 }
