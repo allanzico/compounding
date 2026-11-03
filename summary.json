@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-02T13:23:55+00:00",
- "today": "2026-11-02",
- "fixtures": 11,
- "divisions": 8,
- "market_lines": 902,
- "history_matches": 23085,
+ "generated": "2026-11-03T12:44:38+00:00",
+ "today": "2026-11-03",
+ "fixtures": 13,
+ "divisions": 2,
+ "market_lines": 1066,
+ "history_matches": 10061,
  "validation": {
   "shots": "marginal",
   "fouls": "beats league average",
@@ -17,104 +17,10 @@
  },
  "diagnostics": [
   {
-   "div": "E0",
-   "train": 2749,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "F1",
-   "train": 2417,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "F2",
-   "train": 2507,
+   "div": "B1",
+   "train": 2174,
    "skipped": [
-    "Reims v Sochaux (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "G1",
-   "train": 1729,
-   "skipped": [
-    "Kalamata v Iraklis (7 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "I1",
-   "train": 2758,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
-   "div": "P1",
-   "train": 2230,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
-   "div": "SP1",
-   "train": 2768,
-   "skipped": [
-    "La Coruna v Osasuna (8 eff. matches)"
+    "Kortrijk v KV Mechelen (0 eff. matches)"
    ],
    "models": [
     "goals",
@@ -128,10 +34,27 @@
    "rows": 0
   },
   {
-   "div": "SP2",
-   "train": 3362,
+   "div": "E1",
+   "train": 4020,
    "skipped": [
-    "Mallorca v Cadiz (9 eff. matches)"
+    "Preston v Sheffield Utd (0 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 902
+  },
+  {
+   "div": "E2",
+   "train": 3867,
+   "skipped": [
+    "Oxford Utd v Reading (0 eff. matches)"
    ],
    "models": [
     "goals",
@@ -145,19 +68,11 @@
    "rows": 164
   },
   {
-   "div": "T1",
-   "train": 2565,
+   "div": "E3",
+   "train": 0,
    "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
+   "models": [],
+   "error": "only 0 training matches"
   }
  ]
 }
