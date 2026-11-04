@@ -1,132 +1,38 @@
 {
-  "run_at": "2026-11-03T12:44:35+00:00",
-  "today": "2026-11-03",
+  "run_at": "2026-11-04T12:55:41+00:00",
+  "today": "2026-11-04",
   "notify": false,
   "errors": [],
   "history_matches": 10061,
   "history_with_closing": 10061,
   "picks_settled_today": 0,
-  "fixtures_scanned": 16,
+  "fixtures_scanned": 5,
   "divisions_priced": [
     "B1",
     "E1",
     "E2"
   ],
-  "divisions_skipped": {
-    "E3": "only 0 training matches"
-  },
-  "fixtures_skipped_thin_ratings": 3,
+  "divisions_skipped": {},
+  "fixtures_skipped_thin_ratings": 2,
   "thin_teams": [
     "KV Mechelen (0.0 eff. matches)",
-    "Oxford Utd (0.0 eff. matches)",
-    "Sheffield Utd (0.0 eff. matches)"
+    "Oxford Utd (0.0 eff. matches)"
   ],
   "implausible_edges_rejected": 0,
   "implausible_examples": [],
   "qualifying_picks": [
-    {
-      "kickoff": "2026-11-03",
-      "league": "E1",
-      "fixture": "Derby v Norwich",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.35410432725131036,
-      "odds_available": 3.5,
-      "devigged_market_p": 0.2599807999714669,
-      "edge_pct": 23.93651453795862,
-      "lam": 1.3950820427543378,
-      "mu": 1.470598430438418
-    },
     {
       "kickoff": "2026-11-04",
       "league": "E1",
       "fixture": "Wrexham v Middlesbrough",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.2924947474600281,
+      "p_model": 0.29251287077674326,
       "odds_available": 4.2,
       "devigged_market_p": 0.21400753809503859,
-      "edge_pct": 22.84779393321181,
-      "lam": 1.2545881674075208,
-      "mu": 1.6175820819644529
-    },
-    {
-      "kickoff": "2026-11-03",
-      "league": "E1",
-      "fixture": "Birmingham v Millwall",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.3270749928985083,
-      "odds_available": 3.7,
-      "devigged_market_p": 0.24360852150043455,
-      "edge_pct": 21.01774737244806,
-      "lam": 1.380579785954387,
-      "mu": 1.2226914614757272
-    },
-    {
-      "kickoff": "2026-11-03",
-      "league": "E1",
-      "fixture": "West Brom v Southampton",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.4367006131708492,
-      "odds_available": 2.7,
-      "devigged_market_p": 0.3429763265850405,
-      "edge_pct": 17.90916555612929,
-      "lam": 1.1964073736814613,
-      "mu": 1.495755493244912
-    },
-    {
-      "kickoff": "2026-11-03",
-      "league": "E1",
-      "fixture": "QPR v Burnley",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.31863946580237584,
-      "odds_available": 3.7,
-      "devigged_market_p": 0.24791523578459942,
-      "edge_pct": 17.896602346879064,
-      "lam": 1.5465731910445708,
-      "mu": 1.3099257460048486
-    },
-    {
-      "kickoff": "2026-11-03",
-      "league": "E2",
-      "fixture": "Wigan v Mansfield",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5563677342488781,
-      "odds_available": 2.08,
-      "devigged_market_p": 0.4540682414698162,
-      "edge_pct": 15.724488723766639,
-      "lam": 1.0777853785278417,
-      "mu": 1.373504051619835
-    },
-    {
-      "kickoff": "2026-11-03",
-      "league": "E1",
-      "fixture": "Blackburn v Stoke",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.6234582413488825,
-      "odds_available": 1.8,
-      "devigged_market_p": 0.5263157894736842,
-      "edge_pct": 12.22248344279886,
-      "lam": 1.1765700842444597,
-      "mu": 1.0206539476161747
-    },
-    {
-      "kickoff": "2026-11-03",
-      "league": "E1",
-      "fixture": "Charlton v Bolton",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.34288463172230166,
-      "odds_available": 3.1,
-      "devigged_market_p": 0.2994234570693443,
-      "edge_pct": 6.2942358339135085,
-      "lam": 1.4144827470905865,
-      "mu": 1.3083087176756565
+      "edge_pct": 22.85540572623217,
+      "lam": 1.2546126422049957,
+      "mu": 1.6175134990386137
     },
     {
       "kickoff": "2026-11-04",
@@ -134,16 +40,16 @@
       "fixture": "Bristol City v Wolves",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.542727113903354,
+      "p_model": 0.5427069232947499,
       "odds_available": 1.95,
       "devigged_market_p": 0.49350649350649356,
-      "edge_pct": 5.831787211154027,
-      "lam": 1.0933762678686043,
-      "mu": 1.410859895475733
+      "edge_pct": 5.827850042476235,
+      "lam": 1.093521566216302,
+      "mu": 1.410793375470793
     }
   ],
   "running": {
-    "picks_total": 778,
+    "picks_total": 780,
     "picks_with_clv": 732,
     "mean_clv_fair_pct": -6.139,
     "clv_ci95": [

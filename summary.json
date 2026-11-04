@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-03T12:44:38+00:00",
- "today": "2026-11-03",
- "fixtures": 13,
- "divisions": 2,
- "market_lines": 1066,
+ "generated": "2026-11-04T12:55:44+00:00",
+ "today": "2026-11-04",
+ "fixtures": 3,
+ "divisions": 1,
+ "market_lines": 246,
  "history_matches": 10061,
  "validation": {
   "shots": "marginal",
@@ -36,9 +36,7 @@
   {
    "div": "E1",
    "train": 4020,
-   "skipped": [
-    "Preston v Sheffield Utd (0 eff. matches)"
-   ],
+   "skipped": [],
    "models": [
     "goals",
     "ht_goals",
@@ -48,7 +46,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 902
+   "rows": 246
   },
   {
    "div": "E2",
@@ -65,14 +63,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 164
-  },
-  {
-   "div": "E3",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
+   "rows": 0
   }
  ]
 }
