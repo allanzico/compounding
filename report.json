@@ -1,66 +1,32 @@
 {
-  "run_at": "2026-11-04T12:55:41+00:00",
-  "today": "2026-11-04",
+  "run_at": "2026-11-05T13:05:23+00:00",
+  "today": "2026-11-05",
   "notify": false,
   "errors": [],
-  "history_matches": 10061,
-  "history_with_closing": 10061,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 5,
-  "divisions_priced": [
-    "B1",
-    "E1",
-    "E2"
-  ],
+  "history_matches": 10077,
+  "history_with_closing": 10077,
+  "picks_settled_today": 11,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
   "divisions_skipped": {},
-  "fixtures_skipped_thin_ratings": 2,
-  "thin_teams": [
-    "KV Mechelen (0.0 eff. matches)",
-    "Oxford Utd (0.0 eff. matches)"
-  ],
+  "fixtures_skipped_thin_ratings": 0,
+  "thin_teams": [],
   "implausible_edges_rejected": 0,
   "implausible_examples": [],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-11-04",
-      "league": "E1",
-      "fixture": "Wrexham v Middlesbrough",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.29251287077674326,
-      "odds_available": 4.2,
-      "devigged_market_p": 0.21400753809503859,
-      "edge_pct": 22.85540572623217,
-      "lam": 1.2546126422049957,
-      "mu": 1.6175134990386137
-    },
-    {
-      "kickoff": "2026-11-04",
-      "league": "E1",
-      "fixture": "Bristol City v Wolves",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5427069232947499,
-      "odds_available": 1.95,
-      "devigged_market_p": 0.49350649350649356,
-      "edge_pct": 5.827850042476235,
-      "lam": 1.093521566216302,
-      "mu": 1.410793375470793
-    }
-  ],
+  "qualifying_picks": [],
   "running": {
     "picks_total": 780,
-    "picks_with_clv": 732,
-    "mean_clv_fair_pct": -6.139,
+    "picks_with_clv": 743,
+    "mean_clv_fair_pct": -6.219,
     "clv_ci95": [
-      -6.828,
-      -5.45
+      -6.902,
+      -5.536
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 732 picks with mean fair CLV -6.14%. Method v2 section 8 says stop.",
-    "picks_settled": 732,
-    "paper_roi_pct": -0.585,
-    "hit_rate": 0.3811
+    "kill_criterion": "MET \u2014 743 picks with mean fair CLV -6.22%. Method v2 section 8 says stop.",
+    "picks_settled": 743,
+    "paper_roi_pct": -0.229,
+    "hit_rate": 0.3809
   },
   "gate_passed": false,
   "notify_reasons": []
