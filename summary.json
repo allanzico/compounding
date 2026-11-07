@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-06T12:52:55+00:00",
- "today": "2026-11-06",
- "fixtures": 111,
+ "generated": "2026-11-07T11:40:32+00:00",
+ "today": "2026-11-07",
+ "fixtures": 98,
  "divisions": 16,
- "market_lines": 9102,
+ "market_lines": 8036,
  "history_matches": 40296,
  "validation": {
   "yellows": "no better than league average",
@@ -20,7 +20,6 @@
    "div": "B1",
    "train": 2175,
    "skipped": [
-    "Standard v Beveren (8 eff. matches)",
     "Antwerp v Lommel SK (8 eff. matches)"
    ],
    "models": [
@@ -51,13 +50,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "D2",
    "train": 2232,
    "skipped": [
-    "Braunschweig v Cottbus (8 eff. matches)",
     "Hertha v Wolfsburg (8 eff. matches)",
     "Osnabruck v Kaiserslautern (9 eff. matches)",
     "Magdeburg v St Pauli (9 eff. matches)",
@@ -72,13 +70,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 328
+   "rows": 246
   },
   {
    "div": "E0",
    "train": 2750,
    "skipped": [
-    "Everton v Coventry (8 eff. matches)",
     "Arsenal v Hull (8 eff. matches)"
    ],
    "models": [
@@ -105,7 +102,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 984
+   "rows": 902
   },
   {
    "div": "F1",
@@ -123,14 +120,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "F2",
    "train": 2509,
    "skipped": [
-    "Nancy v Sochaux (9 eff. matches)",
-    "Dijon v Red Star (9 eff. matches)",
     "Pau FC v Nantes (9 eff. matches)"
    ],
    "models": [
@@ -142,7 +137,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 164
   },
   {
    "div": "G1",
@@ -177,13 +172,12 @@
     "fouls",
     "yellows"
    ],
-   "rows": 738
+   "rows": 656
   },
   {
    "div": "I2",
    "train": 2760,
    "skipped": [
-    "Ascoli v Palermo (10 eff. matches)",
     "Benevento v Avellino (9 eff. matches)",
     "Mantova v Verona (9 eff. matches)",
     "Juve Stabia v Arezzo (9 eff. matches)",
@@ -216,7 +210,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "P1",
@@ -234,7 +228,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "SC0",
@@ -288,7 +282,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 656
+   "rows": 574
   },
   {
    "div": "SP2",
@@ -322,7 +316,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   }
  ]
 }
