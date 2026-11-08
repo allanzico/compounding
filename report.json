@@ -1,20 +1,18 @@
 {
-  "run_at": "2026-11-07T11:40:23+00:00",
-  "today": "2026-11-07",
+  "run_at": "2026-11-08T11:52:39+00:00",
+  "today": "2026-11-08",
   "notify": false,
   "errors": [],
   "history_matches": 40296,
   "history_with_closing": 40257,
   "picks_settled_today": 0,
-  "fixtures_scanned": 126,
+  "fixtures_scanned": 59,
   "divisions_priced": [
     "B1",
     "D1",
     "D2",
     "E0",
-    "E1",
     "F1",
-    "F2",
     "G1",
     "I1",
     "I2",
@@ -25,102 +23,45 @@
     "SP2",
     "T1"
   ],
-  "divisions_skipped": {
-    "SC1": "only 0 training matches",
-    "SC2": "only 0 training matches",
-    "SC3": "only 0 training matches"
-  },
-  "fixtures_skipped_thin_ratings": 28,
+  "divisions_skipped": {},
+  "fixtures_skipped_thin_ratings": 11,
   "thin_teams": [
-    "Academico Viseu (8.2 eff. matches)",
-    "Amedspor (8.4 eff. matches)",
-    "Arezzo (8.6 eff. matches)",
-    "Benevento (8.9 eff. matches)",
     "Cambuur (9.3 eff. matches)",
     "Corum (8.4 eff. matches)",
-    "Den Haag (9.1 eff. matches)",
-    "Elversberg (6.9 eff. matches)",
     "Erzurumspor (8.4 eff. matches)",
-    "Frosinone (9.4 eff. matches)",
-    "Heidenheim (8.6 eff. matches)",
-    "Hull (7.7 eff. matches)"
+    "Heidenheim (8.5 eff. matches)",
+    "Iraklis (7.7 eff. matches)",
+    "Kalamata (7.7 eff. matches)",
+    "Le Mans (7.6 eff. matches)",
+    "Maritimo (8.4 eff. matches)",
+    "Schalke 04 (7.1 eff. matches)",
+    "St Pauli (9.2 eff. matches)",
+    "Vicenza (8.7 eff. matches)"
   ],
-  "implausible_edges_rejected": 19,
+  "implausible_edges_rejected": 9,
   "implausible_examples": [
     "St. Gilloise v Genk (B1) UNDER edge +25%",
     "Sunderland v Chelsea (E0) H edge +28%",
     "Crystal Palace v Liverpool (E0) H edge +30%",
-    "West Brom v Millwall (E1) A edge +33%",
-    "Watford v Middlesbrough (E1) UNDER edge +25%",
-    "QPR v Lincoln (E1) A edge +28%",
-    "Aris v Panetolikos (G1) D edge +29%",
-    "Torino v Lecce (I1) A edge +32%"
+    "AZ Alkmaar v Groningen (N1) A edge +27%",
+    "Sociedad v Vallecano (SP1) A edge +29%",
+    "Elche v Betis (SP1) H edge +27%",
+    "Besiktas v Genclerbirligi (T1) D edge +29%",
+    "Besiktas v Genclerbirligi (T1) A edge +37%"
   ],
   "qualifying_picks": [
-    {
-      "kickoff": "2026-11-07",
-      "league": "I1",
-      "fixture": "Roma v Sassuolo",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.13871495770188874,
-      "odds_available": 9.0,
-      "devigged_market_p": 0.0963329246405479,
-      "edge_pct": 24.843461931699863,
-      "lam": 2.416861048274576,
-      "mu": 0.990129785693066
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E0",
-      "fixture": "Nott'm Forest v Man City",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.2618267721049829,
-      "odds_available": 4.75,
-      "devigged_market_p": 0.1959479727193681,
-      "edge_pct": 24.367716749866887,
-      "lam": 1.1285063561077522,
-      "mu": 1.5914732130137415
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "SC0",
-      "fixture": "Dundee United v Motherwell",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.36532707493834693,
-      "odds_available": 3.4,
-      "devigged_market_p": 0.2715254778604456,
-      "edge_pct": 24.211205479037943,
-      "lam": 1.3323676013509638,
-      "mu": 1.299166875059884
-    },
     {
       "kickoff": "2026-11-08",
       "league": "F1",
       "fixture": "Lens v Marseille",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.5395408464748762,
+      "p_model": 0.5395134374592607,
       "odds_available": 2.3,
       "devigged_market_p": 0.41765297858418265,
-      "edge_pct": 24.09439468922152,
-      "lam": 2.1288320618800336,
-      "mu": 1.38776945721298
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "F1",
-      "fixture": "Auxerre v Paris FC",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.28209147098987564,
-      "odds_available": 4.33,
-      "devigged_market_p": 0.21502926251474017,
-      "edge_pct": 22.145606938616158,
-      "lam": 1.1600452813378392,
-      "mu": 1.5240347206129916
+      "edge_pct": 24.08809061562995,
+      "lam": 2.128687142791906,
+      "mu": 1.3877549005756113
     },
     {
       "kickoff": "2026-11-08",
@@ -128,12 +69,12 @@
       "fixture": "Olympiakos v PAOK",
       "market": "1x2",
       "selection": "D",
-      "p_model": 0.3047960674587481,
+      "p_model": 0.30479172750748645,
       "odds_available": 4.0,
       "devigged_market_p": 0.22369417794274546,
-      "edge_pct": 21.918426983499238,
-      "lam": 1.5297639420200193,
-      "mu": 0.8024102981492787
+      "edge_pct": 21.916691002994583,
+      "lam": 1.5297851674804668,
+      "mu": 0.8026094219716884
     },
     {
       "kickoff": "2026-11-08",
@@ -141,12 +82,12 @@
       "fixture": "Alanyaspor v Trabzonspor",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.25648676488129457,
+      "p_model": 0.25652802597021396,
       "odds_available": 4.75,
       "devigged_market_p": 0.1779826805562184,
-      "edge_pct": 21.831213318614928,
-      "lam": 1.147427175799301,
-      "mu": 1.6528866885764073
+      "edge_pct": 21.85081233585162,
+      "lam": 1.1475333600226074,
+      "mu": 1.6527913735564213
     },
     {
       "kickoff": "2026-11-08",
@@ -154,38 +95,12 @@
       "fixture": "Angers v Nice",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.3383029220054298,
+      "p_model": 0.3383338943108987,
       "odds_available": 3.6,
       "devigged_market_p": 0.2602648860623186,
-      "edge_pct": 21.789051921954727,
-      "lam": 1.1942456428043753,
-      "mu": 1.2687698913506438
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "G1",
-      "fixture": "Aris v Panetolikos",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5772256314112978,
-      "odds_available": 2.08,
-      "devigged_market_p": 0.4540682414698162,
-      "edge_pct": 20.062931333549948,
-      "lam": 1.6489334882478563,
-      "mu": 0.7223660862091628
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "SP2",
-      "fixture": "Cordoba v Ceuta",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.2169608964814073,
-      "odds_available": 5.5,
-      "devigged_market_p": 0.153682983997176,
-      "edge_pct": 19.328493064774,
-      "lam": 2.188488511263592,
-      "mu": 1.2811405173963912
+      "edge_pct": 21.800201951923537,
+      "lam": 1.1943655394174264,
+      "mu": 1.268779054538286
     },
     {
       "kickoff": "2026-11-08",
@@ -193,25 +108,12 @@
       "fixture": "Rennes v Lille",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.361013523630626,
+      "p_model": 0.36099313049191395,
       "odds_available": 3.3,
       "devigged_market_p": 0.2847116727884106,
-      "edge_pct": 19.134462798106576,
-      "lam": 1.5343619362348246,
-      "mu": 1.4830249418847123
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E0",
-      "fixture": "Leeds v Tottenham",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.44027815139054993,
-      "odds_available": 2.7,
-      "devigged_market_p": 0.35077599170050555,
-      "edge_pct": 18.87510087544848,
-      "lam": 1.4061332821271375,
-      "mu": 1.05960704421533
+      "edge_pct": 19.127733062331597,
+      "lam": 1.5344173126418352,
+      "mu": 1.4829846596915364
     },
     {
       "kickoff": "2026-11-08",
@@ -219,12 +121,12 @@
       "fixture": "Villarreal v Getafe",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.5941429459090595,
+      "p_model": 0.5941031757847894,
       "odds_available": 2.0,
       "devigged_market_p": 0.47368421052631576,
-      "edge_pct": 18.828589181811893,
-      "lam": 1.654232457905632,
-      "mu": 0.6529233412479101
+      "edge_pct": 18.820635156957888,
+      "lam": 1.6542539480904082,
+      "mu": 0.6530519656821906
     },
     {
       "kickoff": "2026-11-08",
@@ -232,12 +134,12 @@
       "fixture": "Sp Gijon v Valladolid",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.5009363637262377,
+      "p_model": 0.5009247247178588,
       "odds_available": 2.35,
       "devigged_market_p": 0.4005514669785734,
-      "edge_pct": 17.72004547566588,
-      "lam": 1.5940380750751786,
-      "mu": 1.0437090760272798
+      "edge_pct": 17.71731030869681,
+      "lam": 1.5939983651049783,
+      "mu": 1.0437166781010825
     },
     {
       "kickoff": "2026-11-08",
@@ -245,25 +147,12 @@
       "fixture": "Freiburg v Union Berlin",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.18794561903021353,
+      "p_model": 0.18796626529200794,
       "odds_available": 6.25,
       "devigged_market_p": 0.14105270383970325,
-      "edge_pct": 17.46601189388346,
-      "lam": 1.8766245995799342,
-      "mu": 0.9779247385486283
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "T1",
-      "fixture": "Eyupspor v Kocaelispor",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.7015779461011833,
-      "odds_available": 1.67,
-      "devigged_market_p": 0.5628272251308901,
-      "edge_pct": 17.1635169988976,
-      "lam": 0.8910137855203778,
-      "mu": 1.016920326572371
+      "edge_pct": 17.478915807504958,
+      "lam": 1.8765770792844294,
+      "mu": 0.9779994921699551
     },
     {
       "kickoff": "2026-11-08",
@@ -271,12 +160,12 @@
       "fixture": "Fiorentina v Juventus",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.5851499650397722,
+      "p_model": 0.5851187319671108,
       "odds_available": 2.0,
       "devigged_market_p": 0.47368421052631576,
-      "edge_pct": 17.029993007954445,
-      "lam": 0.9431723593686808,
-      "mu": 1.3980044220707446
+      "edge_pct": 17.02374639342217,
+      "lam": 0.9432938423899845,
+      "mu": 1.3980013904183792
     },
     {
       "kickoff": "2026-11-08",
@@ -284,25 +173,12 @@
       "fixture": "AEK v Levadeiakos",
       "market": "1x2",
       "selection": "D",
-      "p_model": 0.19498700042916708,
+      "p_model": 0.19502969140188678,
       "odds_available": 6.0,
       "devigged_market_p": 0.14027672700935215,
-      "edge_pct": 16.992200257500258,
-      "lam": 2.3062578644059233,
-      "mu": 0.649398116864865
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E1",
-      "fixture": "Birmingham v Swansea",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.2776758215140848,
-      "odds_available": 4.2,
-      "devigged_market_p": 0.2154483019174987,
-      "edge_pct": 16.62384503591563,
-      "lam": 1.5142526070138467,
-      "mu": 1.1222113636145266
+      "edge_pct": 17.017814841132072,
+      "lam": 2.305982053498944,
+      "mu": 0.6495531812148359
     },
     {
       "kickoff": "2026-11-08",
@@ -310,12 +186,12 @@
       "fixture": "Napoli v Lazio",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.5533695205944362,
+      "p_model": 0.5533471635079694,
       "odds_available": 2.1,
       "devigged_market_p": 0.4516971279373368,
-      "edge_pct": 16.207599324831623,
-      "lam": 1.4093677267244498,
-      "mu": 1.053513648959216
+      "edge_pct": 16.202904336673573,
+      "lam": 1.4093725160415458,
+      "mu": 1.0535953918224341
     },
     {
       "kickoff": "2026-11-08",
@@ -323,51 +199,12 @@
       "fixture": "Ath Madrid v Barcelona",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.34172130592719485,
+      "p_model": 0.34171627440011576,
       "odds_available": 3.4,
       "devigged_market_p": 0.28118393234672306,
-      "edge_pct": 16.185244015246237,
-      "lam": 1.4761387241786847,
-      "mu": 1.913621622219938
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "SP2",
-      "fixture": "Leganes v Albacete",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.3224391110106145,
-      "odds_available": 3.6,
-      "devigged_market_p": 0.2546488899693844,
-      "edge_pct": 16.078079963821224,
-      "lam": 1.2671112482309468,
-      "mu": 1.1090555592784253
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E1",
-      "fixture": "Blackburn v West Ham",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.22029474687546172,
-      "odds_available": 5.25,
-      "devigged_market_p": 0.16877569974340217,
-      "edge_pct": 15.654742109617391,
-      "lam": 1.183440759093463,
-      "mu": 1.9890277280016535
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "I2",
-      "fixture": "Cesena v Catanzaro",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.33795999521499465,
-      "odds_available": 3.4,
-      "devigged_market_p": 0.26574961662162055,
-      "edge_pct": 14.906398373098174,
-      "lam": 1.623264722533772,
-      "mu": 1.480221781130829
+      "edge_pct": 16.183533296039364,
+      "lam": 1.4761929651050785,
+      "mu": 1.913593354667433
     },
     {
       "kickoff": "2026-11-08",
@@ -375,25 +212,12 @@
       "fixture": "Virtus Entella v Modena",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.6737344752982991,
+      "p_model": 0.6736987227322072,
       "odds_available": 1.7,
       "devigged_market_p": 0.5526315789473685,
-      "edge_pct": 14.534860800710847,
-      "lam": 0.9177039718380414,
-      "mu": 1.0931652896913604
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "SC0",
-      "fixture": "St Mirren v Rangers",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.17613006092126732,
-      "odds_available": 6.5,
-      "devigged_market_p": 0.1298632447794938,
-      "edge_pct": 14.484539598823766,
-      "lam": 0.9405988102419408,
-      "mu": 1.9757283647975905
+      "edge_pct": 14.528782864475232,
+      "lam": 0.9178297982123672,
+      "mu": 1.0931715561242215
     },
     {
       "kickoff": "2026-11-08",
@@ -401,12 +225,12 @@
       "fixture": "Heerenveen v Feyenoord",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.39673982396262086,
+      "p_model": 0.39673397233207197,
       "odds_available": 2.88,
       "devigged_market_p": 0.32710280373831774,
-      "edge_pct": 14.261069301234809,
-      "lam": 1.2312926397365478,
-      "mu": 1.8892260091445148
+      "edge_pct": 14.259384031636714,
+      "lam": 1.231389211195279,
+      "mu": 1.8891566665722888
     },
     {
       "kickoff": "2026-11-08",
@@ -414,77 +238,12 @@
       "fixture": "Carrarese v Sampdoria",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.6159217442097945,
+      "p_model": 0.6158984601497898,
       "odds_available": 1.85,
       "devigged_market_p": 0.513157894736842,
-      "edge_pct": 13.945522678811994,
-      "lam": 1.3103572670255936,
-      "mu": 0.9150031381702423
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "SC0",
-      "fixture": "Aberdeen v Hibernian",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5680360995792261,
-      "odds_available": 2.0,
-      "devigged_market_p": 0.47368421052631576,
-      "edge_pct": 13.607219915845214,
-      "lam": 1.1437008985472368,
-      "mu": 1.2627048856686849
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "B1",
-      "fixture": "RAAL La Louviere v Cercle Brugge",
-      "market": "over_under",
-      "selection": "OVER",
-      "p_model": 0.6088671567405519,
-      "odds_available": 1.85,
-      "devigged_market_p": 0.513157894736842,
-      "edge_pct": 12.640423997002115,
-      "lam": 1.5526843483895982,
-      "mu": 1.5940451937042843
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E1",
-      "fixture": "Charlton v Sheffield United",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5896853953557253,
-      "odds_available": 1.91,
-      "devigged_market_p": 0.5,
-      "edge_pct": 12.629910512943532,
-      "lam": 1.0022321535869945,
-      "mu": 1.3217651261132664
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E1",
-      "fixture": "Watford v Middlesbrough",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.2047023299455434,
-      "odds_available": 5.5,
-      "devigged_market_p": 0.15806972596126645,
-      "edge_pct": 12.586281470048878,
-      "lam": 0.9896898372928408,
-      "mu": 1.781605519418898
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E1",
-      "fixture": "West Brom v Millwall",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5601739753227204,
-      "odds_available": 2.0,
-      "devigged_market_p": 0.47368421052631576,
-      "edge_pct": 12.03479506454408,
-      "lam": 1.235566374170317,
-      "mu": 1.2010424595541018
+      "edge_pct": 13.941215127711114,
+      "lam": 1.3103866214487825,
+      "mu": 0.915060830382448
     },
     {
       "kickoff": "2026-11-08",
@@ -492,12 +251,12 @@
       "fixture": "Twente v Ajax",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.42979866468057415,
+      "p_model": 0.4297744831078413,
       "odds_available": 2.6,
       "devigged_market_p": 0.3627450980392157,
-      "edge_pct": 11.747652816949273,
-      "lam": 1.6937403520276308,
-      "mu": 1.2769092430635494
+      "edge_pct": 11.741365608038734,
+      "lam": 1.6937720889234242,
+      "mu": 1.2769844013436464
     },
     {
       "kickoff": "2026-11-08",
@@ -505,12 +264,12 @@
       "fixture": "Genoa v Milan",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.24790518205012085,
+      "p_model": 0.2479378707407801,
       "odds_available": 4.5,
       "devigged_market_p": 0.20548693467896698,
-      "edge_pct": 11.557331922554393,
-      "lam": 0.9396225457767522,
-      "mu": 1.4443052617571988
+      "edge_pct": 11.572041833351054,
+      "lam": 0.9397271591959603,
+      "mu": 1.4442772945348423
     },
     {
       "kickoff": "2026-11-08",
@@ -518,12 +277,12 @@
       "fixture": "Ipswich v Bournemouth",
       "market": "over_under",
       "selection": "OVER",
-      "p_model": 0.641813373063446,
+      "p_model": 0.6417666966166077,
       "odds_available": 1.73,
       "devigged_market_p": 0.5483028720626633,
-      "edge_pct": 11.033713539976153,
-      "lam": 1.308254493708652,
-      "mu": 1.9979416200749944
+      "edge_pct": 11.02563851467313,
+      "lam": 1.3083117336268892,
+      "mu": 1.9976513854390265
     },
     {
       "kickoff": "2026-11-08",
@@ -531,12 +290,12 @@
       "fixture": "AZ Alkmaar v Groningen",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.3848494962816219,
+      "p_model": 0.3848521341089628,
       "odds_available": 2.88,
       "devigged_market_p": 0.32710280373831774,
-      "edge_pct": 10.836654929107103,
-      "lam": 1.9428676292100702,
-      "mu": 1.2335507594093835
+      "edge_pct": 10.837414623381282,
+      "lam": 1.9428171911295038,
+      "mu": 1.2335886662729505
     },
     {
       "kickoff": "2026-11-08",
@@ -544,12 +303,12 @@
       "fixture": "Guimaraes v Porto",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.5673601271081167,
+      "p_model": 0.5673279244907177,
       "odds_available": 1.95,
       "devigged_market_p": 0.49350649350649356,
-      "edge_pct": 10.635224786082741,
-      "lam": 0.7741765865660618,
-      "mu": 1.6348222568578423
+      "edge_pct": 10.628945275689938,
+      "lam": 0.7743561145668438,
+      "mu": 1.6347661710884422
     },
     {
       "kickoff": "2026-11-08",
@@ -557,12 +316,12 @@
       "fixture": "FC Koln v Leverkusen",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.27496280619699054,
+      "p_model": 0.27500058841051944,
       "odds_available": 4.0,
       "devigged_market_p": 0.23471870793270766,
-      "edge_pct": 9.985122478796216,
-      "lam": 1.4022215718653506,
-      "mu": 1.9320784765513501
+      "edge_pct": 10.000235364207777,
+      "lam": 1.4022932465252202,
+      "mu": 1.9319252852431206
     },
     {
       "kickoff": "2026-11-08",
@@ -570,25 +329,12 @@
       "fixture": "Inter v Como",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.4159906241715523,
+      "p_model": 0.41596580742034994,
       "odds_available": 2.63,
       "devigged_market_p": 0.36319612590799033,
-      "edge_pct": 9.405534157118245,
-      "lam": 1.7641292236581974,
-      "mu": 1.2681848558500286
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "SP2",
-      "fixture": "Burgos v Celta B",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.55255016251841,
-      "odds_available": 1.98,
-      "devigged_market_p": 0.48031496062992135,
-      "edge_pct": 9.404932178645197,
-      "lam": 1.6195428699418548,
-      "mu": 0.8465125012628741
+      "edge_pct": 9.399007351552036,
+      "lam": 1.7642055363641216,
+      "mu": 1.2682205278758412
     },
     {
       "kickoff": "2026-11-08",
@@ -596,25 +342,12 @@
       "fixture": "Girona v Almeria",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.3030128468049256,
+      "p_model": 0.3030525616258299,
       "odds_available": 3.6,
       "devigged_market_p": 0.2559768525509934,
-      "edge_pct": 9.084624849773215,
-      "lam": 1.7278847409032927,
-      "mu": 1.3612198757433496
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "I1",
-      "fixture": "Parma v Bologna",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.6294946127356112,
-      "odds_available": 1.73,
-      "devigged_market_p": 0.5483028720626633,
-      "edge_pct": 8.902568003260747,
-      "lam": 0.8402501165426235,
-      "mu": 1.334490037458032
+      "edge_pct": 9.098922185298752,
+      "lam": 1.7276926226408396,
+      "mu": 1.361249761549895
     },
     {
       "kickoff": "2026-11-08",
@@ -622,25 +355,12 @@
       "fixture": "Bochum v Karlsruhe",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.4532743496452326,
+      "p_model": 0.45325775460946693,
       "odds_available": 2.4,
       "devigged_market_p": 0.3893129770992367,
-      "edge_pct": 8.785843914855818,
-      "lam": 1.7069611074341597,
-      "mu": 1.16159632529738
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "I1",
-      "fixture": "Torino v Lecce",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5617827028203299,
-      "odds_available": 1.93,
-      "devigged_market_p": 0.5,
-      "edge_pct": 8.424061644323677,
-      "lam": 1.4039783169855804,
-      "mu": 1.0264377808861744
+      "edge_pct": 8.78186110627206,
+      "lam": 1.7069841044992646,
+      "mu": 1.1616443655680986
     },
     {
       "kickoff": "2026-11-08",
@@ -648,25 +368,12 @@
       "fixture": "Estrela v Benfica",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.1082233183831295,
+      "p_model": 0.10827111985722797,
       "odds_available": 10.0,
       "devigged_market_p": 0.07711159208436169,
-      "edge_pct": 8.223318383129508,
-      "lam": 0.8121313655641418,
-      "mu": 2.4826364511679926
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "F2",
-      "fixture": "St Etienne v Laval",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.4703636981975311,
-      "odds_available": 2.3,
-      "devigged_market_p": 0.41025641025641024,
-      "edge_pct": 8.183650585432133,
-      "lam": 1.9512927147796049,
-      "mu": 0.844904845645794
+      "edge_pct": 8.271119857227971,
+      "lam": 0.8122732735249998,
+      "mu": 2.4823173749816188
     },
     {
       "kickoff": "2026-11-08",
@@ -674,25 +381,12 @@
       "fixture": "Gent v Kortrijk",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.5194089707888403,
+      "p_model": 0.5193855337897855,
       "odds_available": 2.08,
       "devigged_market_p": 0.4540682414698162,
-      "edge_pct": 8.037065924078778,
-      "lam": 1.8827054145348197,
-      "mu": 0.7134048833065901
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "G1",
-      "fixture": "Volos NFC v Kifisia",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5641181975469309,
-      "odds_available": 1.9,
-      "devigged_market_p": 0.5,
-      "edge_pct": 7.182457533916864,
-      "lam": 1.1684439405636098,
-      "mu": 1.2529929649878255
+      "edge_pct": 8.03219102827537,
+      "lam": 1.8826307800901996,
+      "mu": 0.7135727890098272
     },
     {
       "kickoff": "2026-11-08",
@@ -700,25 +394,12 @@
       "fixture": "Crystal Palace v Liverpool",
       "market": "1x2",
       "selection": "D",
-      "p_model": 0.24743838682725036,
+      "p_model": 0.2474467839782078,
       "odds_available": 4.33,
       "devigged_market_p": 0.2157880003117655,
-      "edge_pct": 7.140821496199412,
-      "lam": 1.1498703892931676,
-      "mu": 1.7888732993210321
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E0",
-      "fixture": "Fulham v Newcastle",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.4842892103473334,
-      "odds_available": 2.2,
-      "devigged_market_p": 0.43152454780361754,
-      "edge_pct": 6.543626276413361,
-      "lam": 1.5063883317952333,
-      "mu": 1.2319138138013037
+      "edge_pct": 7.14445746256398,
+      "lam": 1.149971472323753,
+      "mu": 1.7887453884189501
     },
     {
       "kickoff": "2026-11-08",
@@ -726,12 +407,12 @@
       "fixture": "Hearts v Falkirk",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.42522841969864145,
+      "p_model": 0.4252353458802305,
       "odds_available": 2.5,
       "devigged_market_p": 0.3796526054590571,
-      "edge_pct": 6.307104924660356,
-      "lam": 2.038009180801497,
-      "mu": 0.9529252293822285
+      "edge_pct": 6.308836470057622,
+      "lam": 2.0379299356553897,
+      "mu": 0.9529736466554308
     },
     {
       "kickoff": "2026-11-08",
@@ -739,25 +420,12 @@
       "fixture": "Brest v Lyon",
       "market": "over_under",
       "selection": "OVER",
-      "p_model": 0.549993854070502,
+      "p_model": 0.5499907668761203,
       "odds_available": 1.93,
       "devigged_market_p": 0.5,
-      "edge_pct": 6.148813835606903,
-      "lam": 1.3674762615651728,
-      "mu": 1.5150985987787116
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "E1",
-      "fixture": "Cardiff v Burnley",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.34069706348772155,
-      "odds_available": 3.1,
-      "devigged_market_p": 0.29640589491182606,
-      "edge_pct": 5.616089681193692,
-      "lam": 1.6561457169764477,
-      "mu": 1.4793439101217334
+      "edge_pct": 6.1482180070912,
+      "lam": 1.3675237737006314,
+      "mu": 1.5150378149016805
     },
     {
       "kickoff": "2026-11-08",
@@ -765,25 +433,12 @@
       "fixture": "Las Palmas v Eldense",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.5272216410362782,
+      "p_model": 0.527233338849563,
       "odds_available": 2.0,
       "devigged_market_p": 0.47368421052631576,
-      "edge_pct": 5.444328207255644,
-      "lam": 1.5132820445839623,
-      "mu": 1.0518359925511898
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "P1",
-      "fixture": "Alverca v Casa Pia",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5694633704459368,
-      "odds_available": 1.85,
-      "devigged_market_p": 0.513157894736842,
-      "edge_pct": 5.350723532498303,
-      "lam": 1.5330957234633185,
-      "mu": 0.8678450146694767
+      "edge_pct": 5.446667769912605,
+      "lam": 1.5132376326301644,
+      "mu": 1.0518341730642067
     },
     {
       "kickoff": "2026-11-08",
@@ -791,12 +446,12 @@
       "fixture": "Monza v Atalanta",
       "market": "1x2",
       "selection": "A",
-      "p_model": 0.5131786523002763,
+      "p_model": 0.513122878738773,
       "odds_available": 2.05,
       "devigged_market_p": 0.4689801800090653,
-      "edge_pct": 5.201623721556614,
-      "lam": 1.3710280254158496,
-      "mu": 1.9544496950505357
+      "edge_pct": 5.190190141448459,
+      "lam": 1.3710328824338918,
+      "mu": 1.954198529077802
     },
     {
       "kickoff": "2026-11-08",
@@ -804,12 +459,12 @@
       "fixture": "Santa Clara v Gil Vicente",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.7011135726166433,
+      "p_model": 0.7010892221489764,
       "odds_available": 1.5,
       "devigged_market_p": 0.625,
-      "edge_pct": 5.1670358924964965,
-      "lam": 1.0462072084797174,
-      "mu": 0.86344623675512
+      "edge_pct": 5.163383322346471,
+      "lam": 1.0462483653679968,
+      "mu": 0.8634952326825369
     },
     {
       "kickoff": "2026-11-08",
@@ -817,25 +472,12 @@
       "fixture": "OFI Crete v Atromitos",
       "market": "over_under",
       "selection": "OVER",
-      "p_model": 0.5297868748133115,
+      "p_model": 0.5297718743125299,
       "odds_available": 1.98,
       "devigged_market_p": 0.48031496062992135,
-      "edge_pct": 4.897801213035691,
-      "lam": 1.5566318347812216,
-      "mu": 1.2401854298587516
-    },
-    {
-      "kickoff": "2026-11-07",
-      "league": "T1",
-      "fixture": "Goztep v Buyuksehyr",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.32089265167124537,
-      "odds_available": 3.25,
-      "devigged_market_p": 0.27710213839363135,
-      "edge_pct": 4.290111793154749,
-      "lam": 1.6296161518333618,
-      "mu": 1.3953917533005813
+      "edge_pct": 4.894831113880915,
+      "lam": 1.556580394932814,
+      "mu": 1.2401739988891456
     },
     {
       "kickoff": "2026-11-08",
@@ -843,16 +485,16 @@
       "fixture": "Rio Ave v Sp Braga",
       "market": "1x2",
       "selection": "H",
-      "p_model": 0.17347819880795243,
+      "p_model": 0.17352304458435935,
       "odds_available": 6.0,
       "devigged_market_p": 0.14500762701427397,
-      "edge_pct": 4.086919284771451,
-      "lam": 0.8578672195325351,
-      "mu": 1.8910218878842115
+      "edge_pct": 4.113826750615601,
+      "lam": 0.8579610527850007,
+      "mu": 1.8908233077913763
     }
   ],
   "running": {
-    "picks_total": 911,
+    "picks_total": 945,
     "picks_with_clv": 775,
     "mean_clv_fair_pct": -6.415,
     "clv_ci95": [
