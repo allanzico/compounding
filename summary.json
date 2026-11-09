@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-08T11:52:44+00:00",
- "today": "2026-11-08",
- "fixtures": 48,
- "divisions": 14,
- "market_lines": 3936,
- "history_matches": 33755,
+ "generated": "2026-11-09T13:48:47+00:00",
+ "today": "2026-11-09",
+ "fixtures": 1,
+ "divisions": 1,
+ "market_lines": 82,
+ "history_matches": 3372,
  "validation": {
   "yellows": "no better than league average",
   "corners": "no better than league average",
@@ -17,44 +17,9 @@
  },
  "diagnostics": [
   {
-   "div": "B1",
-   "train": 2175,
+   "div": "SP2",
+   "train": 3372,
    "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 328
-  },
-  {
-   "div": "D1",
-   "train": 2214,
-   "skipped": [
-    "Hoffenheim v Schalke 04 (7 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
-   "div": "D2",
-   "train": 2232,
-   "skipped": [
-    "Magdeburg v St Pauli (9 eff. matches)",
-    "Heidenheim v Hannover (9 eff. matches)"
-   ],
    "models": [
     "goals",
     "ht_goals",
@@ -65,185 +30,6 @@
     "yellows"
    ],
    "rows": 82
-  },
-  {
-   "div": "E0",
-   "train": 2750,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 410
-  },
-  {
-   "div": "F1",
-   "train": 2418,
-   "skipped": [
-    "Le Mans v Monaco (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 410
-  },
-  {
-   "div": "G1",
-   "train": 1731,
-   "skipped": [
-    "Asteras Tripolis v Kalamata (8 eff. matches)",
-    "Iraklis v Panathinaikos (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 246
-  },
-  {
-   "div": "I1",
-   "train": 2760,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 410
-  },
-  {
-   "div": "I2",
-   "train": 2760,
-   "skipped": [
-    "Vicenza v Cremonese (9 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
-   "div": "N1",
-   "train": 2167,
-   "skipped": [
-    "Cambuur v PSV Eindhoven (9 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 328
-  },
-  {
-   "div": "P1",
-   "train": 2232,
-   "skipped": [
-    "Estoril v Maritimo (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 328
-  },
-  {
-   "div": "SC0",
-   "train": 1616,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
-  },
-  {
-   "div": "SP1",
-   "train": 2769,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 410
-  },
-  {
-   "div": "SP2",
-   "train": 3365,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 328
-  },
-  {
-   "div": "T1",
-   "train": 2566,
-   "skipped": [
-    "Corum v Fenerbahce (8 eff. matches)",
-    "Rizespor v Erzurumspor (8 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 164
   }
  ]
 }
