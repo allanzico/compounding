@@ -1,15 +1,13 @@
 {
-  "run_at": "2026-11-09T13:48:44+00:00",
-  "today": "2026-11-09",
+  "run_at": "2026-11-10T13:25:36+00:00",
+  "today": "2026-11-10",
   "notify": false,
   "errors": [],
-  "history_matches": 40439,
-  "history_with_closing": 40400,
-  "picks_settled_today": 165,
-  "fixtures_scanned": 1,
-  "divisions_priced": [
-    "SP2"
-  ],
+  "history_matches": 40441,
+  "history_with_closing": 40402,
+  "picks_settled_today": 3,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
   "divisions_skipped": {},
   "fixtures_skipped_thin_ratings": 0,
   "thin_teams": [],
@@ -18,17 +16,17 @@
   "qualifying_picks": [],
   "running": {
     "picks_total": 945,
-    "picks_with_clv": 940,
-    "mean_clv_fair_pct": -6.746,
+    "picks_with_clv": 943,
+    "mean_clv_fair_pct": -6.75,
     "clv_ci95": [
-      -7.374,
-      -6.119
+      -7.376,
+      -6.125
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 940 picks with mean fair CLV -6.75%. Method v2 section 8 says stop.",
-    "picks_settled": 940,
-    "paper_roi_pct": 0.057,
-    "hit_rate": 0.3734
+    "kill_criterion": "MET \u2014 943 picks with mean fair CLV -6.75%. Method v2 section 8 says stop.",
+    "picks_settled": 943,
+    "paper_roi_pct": 0.375,
+    "hit_rate": 0.3754
   },
   "gate_passed": false,
   "notify_reasons": []
