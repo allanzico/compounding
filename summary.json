@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-09T13:48:47+00:00",
- "today": "2026-11-09",
- "fixtures": 1,
- "divisions": 1,
- "market_lines": 82,
- "history_matches": 3372,
+ "generated": "2026-11-14T12:04:58+00:00",
+ "today": "2026-11-14",
+ "fixtures": 14,
+ "divisions": 2,
+ "market_lines": 1148,
+ "history_matches": 7244,
  "validation": {
   "yellows": "no better than league average",
   "corners": "no better than league average",
@@ -17,8 +17,8 @@
  },
  "diagnostics": [
   {
-   "div": "SP2",
-   "train": 3372,
+   "div": "E2",
+   "train": 3870,
    "skipped": [],
    "models": [
     "goals",
@@ -29,7 +29,59 @@
     "fouls",
     "yellows"
    ],
-   "rows": 82
+   "rows": 410
+  },
+  {
+   "div": "E3",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "EC",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SC1",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SC2",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SC3",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "SP2",
+   "train": 3374,
+   "skipped": [
+    "Mallorca v Cordoba (10 eff. matches)"
+   ],
+   "models": [
+    "goals",
+    "ht_goals",
+    "shots",
+    "sot",
+    "corners",
+    "fouls",
+    "yellows"
+   ],
+   "rows": 738
   }
  ]
 }
