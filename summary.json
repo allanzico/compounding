@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-15T12:40:26+00:00",
- "today": "2026-11-15",
- "fixtures": 5,
+ "generated": "2026-11-16T13:32:34+00:00",
+ "today": "2026-11-16",
+ "fixtures": 1,
  "divisions": 1,
- "market_lines": 410,
- "history_matches": 3374,
+ "market_lines": 82,
+ "history_matches": 3384,
  "validation": {
   "yellows": "no better than league average",
   "corners": "no better than league average",
@@ -18,7 +18,7 @@
  "diagnostics": [
   {
    "div": "SP2",
-   "train": 3374,
+   "train": 3384,
    "skipped": [],
    "models": [
     "goals",
@@ -29,7 +29,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 410
+   "rows": 82
   }
  ]
 }

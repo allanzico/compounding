@@ -1,64 +1,36 @@
 {
-  "run_at": "2026-11-15T12:40:24+00:00",
-  "today": "2026-11-15",
+  "run_at": "2026-11-16T13:32:32+00:00",
+  "today": "2026-11-16",
   "notify": false,
   "errors": [],
-  "history_matches": 7244,
-  "history_with_closing": 7244,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 5,
+  "history_matches": 7259,
+  "history_with_closing": 7259,
+  "picks_settled_today": 9,
+  "fixtures_scanned": 1,
   "divisions_priced": [
     "SP2"
   ],
   "divisions_skipped": {},
   "fixtures_skipped_thin_ratings": 0,
   "thin_teams": [],
-  "implausible_edges_rejected": 2,
+  "implausible_edges_rejected": 1,
   "implausible_examples": [
-    "Granada v Las Palmas (SP2) A edge +26%",
-    "Albacete v Celta B (SP2) A edge +26%"
+    "Albacete v Celta B (SP2) A edge +27%"
   ],
-  "qualifying_picks": [
-    {
-      "kickoff": "2026-11-15",
-      "league": "SP2",
-      "fixture": "Eibar v Cadiz",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5666495718207043,
-      "odds_available": 2.05,
-      "devigged_market_p": 0.46052631578947373,
-      "edge_pct": 16.163162223244363,
-      "lam": 1.6468503218312451,
-      "mu": 0.7648731113787569
-    },
-    {
-      "kickoff": "2026-11-15",
-      "league": "SP2",
-      "fixture": "Eldense v Sabadell",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.36794829897148973,
-      "odds_available": 3.1,
-      "devigged_market_p": 0.29444010093776074,
-      "edge_pct": 14.063972681161818,
-      "lam": 0.9600500773949948,
-      "mu": 1.043683262315224
-    }
-  ],
+  "qualifying_picks": [],
   "running": {
     "picks_total": 954,
-    "picks_with_clv": 943,
-    "mean_clv_fair_pct": -6.75,
+    "picks_with_clv": 952,
+    "mean_clv_fair_pct": -6.808,
     "clv_ci95": [
-      -7.376,
-      -6.125
+      -7.433,
+      -6.183
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 943 picks with mean fair CLV -6.75%. Method v2 section 8 says stop.",
-    "picks_settled": 943,
-    "paper_roi_pct": 0.375,
-    "hit_rate": 0.3754
+    "kill_criterion": "MET \u2014 952 picks with mean fair CLV -6.81%. Method v2 section 8 says stop.",
+    "picks_settled": 952,
+    "paper_roi_pct": 0.067,
+    "hit_rate": 0.375
   },
   "gate_passed": false,
   "notify_reasons": []
