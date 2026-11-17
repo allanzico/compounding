@@ -1,22 +1,18 @@
 {
-  "run_at": "2026-11-16T13:32:32+00:00",
-  "today": "2026-11-16",
+  "run_at": "2026-11-17T14:17:40+00:00",
+  "today": "2026-11-17",
   "notify": false,
   "errors": [],
-  "history_matches": 7259,
-  "history_with_closing": 7259,
-  "picks_settled_today": 9,
-  "fixtures_scanned": 1,
-  "divisions_priced": [
-    "SP2"
-  ],
+  "history_matches": 7260,
+  "history_with_closing": 7260,
+  "picks_settled_today": 0,
+  "fixtures_scanned": 0,
+  "divisions_priced": [],
   "divisions_skipped": {},
   "fixtures_skipped_thin_ratings": 0,
   "thin_teams": [],
-  "implausible_edges_rejected": 1,
-  "implausible_examples": [
-    "Albacete v Celta B (SP2) A edge +27%"
-  ],
+  "implausible_edges_rejected": 0,
+  "implausible_examples": [],
   "qualifying_picks": [],
   "running": {
     "picks_total": 954,
