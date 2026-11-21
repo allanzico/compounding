@@ -1,19 +1,19 @@
 {
- "generated": "2026-11-20T13:57:43+00:00",
- "today": "2026-11-20",
- "fixtures": 118,
+ "generated": "2026-11-21T13:24:22+00:00",
+ "today": "2026-11-21",
+ "fixtures": 108,
  "divisions": 16,
- "market_lines": 9676,
+ "market_lines": 8856,
  "history_matches": 42087,
  "validation": {
   "yellows": "no better than league average",
-  "corners": "no better than league average",
   "goals": "no better than league average",
-  "shots": "marginal",
-  "reds": "no better than league average",
+  "corners": "no better than league average",
   "ht_goals": "no better than league average",
   "sot": "beats league average",
-  "fouls": "beats league average"
+  "fouls": "beats league average",
+  "reds": "no better than league average",
+  "shots": "marginal"
  },
  "diagnostics": [
   {
@@ -32,7 +32,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "D1",
@@ -51,16 +51,15 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 410
   },
   {
    "div": "D2",
    "train": 2241,
    "skipped": [
-    "Darmstadt v Heidenheim (9 eff. matches)",
     "Wolfsburg v Holstein Kiel (9 eff. matches)",
     "St Pauli v Bochum (10 eff. matches)",
-    "Karlsruhe v Osnabruck (10 eff. matches)",
+    "Karlsruhe v Osnabruck (9 eff. matches)",
     "Cottbus v Hertha (9 eff. matches)"
    ],
    "models": [
@@ -72,7 +71,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 328
+   "rows": 246
   },
   {
    "div": "E0",
@@ -122,7 +121,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 902
+   "rows": 820
   },
   {
    "div": "E3",
@@ -142,7 +141,6 @@
    "div": "F1",
    "train": 2427,
    "skipped": [
-    "Troyes v Le Havre (8 eff. matches)",
     "Marseille v Le Mans (8 eff. matches)"
    ],
    "models": [
@@ -160,7 +158,6 @@
    "div": "F2",
    "train": 2518,
    "skipped": [
-    "Nancy v Dijon (10 eff. matches)",
     "Sochaux v Dunkerque (10 eff. matches)",
     "Nantes v Grenoble (10 eff. matches)"
    ],
@@ -173,7 +170,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 492
+   "rows": 164
   },
   {
    "div": "G1",
@@ -214,7 +211,6 @@
    "div": "I2",
    "train": 2770,
    "skipped": [
-    "Verona v Cesena (9 eff. matches)",
     "Sampdoria v Benevento (9 eff. matches)",
     "Ascoli v Vicenza (9 eff. matches)",
     "Arezzo v Padova (9 eff. matches)"
@@ -301,7 +297,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 574
+   "rows": 492
   },
   {
    "div": "SP2",
@@ -316,7 +312,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 902
+   "rows": 820
   },
   {
    "div": "T1",
