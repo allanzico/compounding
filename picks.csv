@@ -1140,3 +1140,7 @@ date_taken,kickoff,league,fixture,market,selection,p_model,odds_available,fair_o
 2026-11-22T13:15:38+00:00,2026-11-22,D2,Kaiserslautern v Dresden,1x2,H,0.487241,2.15,2.0524,4.757,0.434943,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-22"
 2026-11-22T13:15:38+00:00,2026-11-22,G1,Panathinaikos v OFI Crete,over_under,UNDER,0.402797,2.6,2.4826,4.727,0.362745,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-22"
 2026-11-22T13:15:38+00:00,2026-11-22,E1,Burnley v Blackburn,over_under,UNDER,0.498687,2.1,2.0053,4.724,0.451697,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-22"
+2026-11-23T15:52:47+00:00,2026-11-23,I1,Monza v Fiorentina,1x2,H,0.321624,3.75,3.1092,20.609,0.249972,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-23"
+2026-11-23T15:52:47+00:00,2026-11-23,E0,Brentford v Everton,over_under,UNDER,0.512416,2.1,1.9515,7.607,0.451697,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-23"
+2026-11-23T15:52:47+00:00,2026-11-23,G1,Asteras Tripolis v Aris,1x2,D,0.344209,3.1,2.9052,6.705,0.299423,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-23"
+2026-11-23T15:52:47+00:00,2026-11-23,SP2,Ceuta v Almeria,over_under,OVER,0.627524,1.67,1.5936,4.797,0.562827,,,,,pending,0.0,,"cbets daily run, football-data.co.uk via repo, 2026-11-23"
