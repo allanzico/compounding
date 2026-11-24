@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-23T15:52:50+00:00",
- "today": "2026-11-23",
- "fixtures": 5,
- "divisions": 5,
- "market_lines": 410,
- "history_matches": 18525,
+ "generated": "2026-11-24T15:44:24+00:00",
+ "today": "2026-11-24",
+ "fixtures": 29,
+ "divisions": 4,
+ "market_lines": 2378,
+ "history_matches": 12351,
  "validation": {
   "goals": "no better than league average",
   "corners": "no better than league average",
@@ -17,8 +17,8 @@
  },
  "diagnostics": [
   {
-   "div": "E0",
-   "train": 2760,
+   "div": "E1",
+   "train": 4056,
    "skipped": [],
    "models": [
     "goals",
@@ -29,29 +29,11 @@
     "fouls",
     "yellows"
    ],
-   "rows": 82
+   "rows": 984
   },
   {
-   "div": "F2",
-   "train": 2518,
-   "skipped": [
-    "Sochaux v Dunkerque (10 eff. matches)",
-    "Nantes v Grenoble (9 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 0
-  },
-  {
-   "div": "G1",
-   "train": 1738,
+   "div": "E2",
+   "train": 3887,
    "skipped": [],
    "models": [
     "goals",
@@ -62,11 +44,25 @@
     "fouls",
     "yellows"
    ],
-   "rows": 82
+   "rows": 410
   },
   {
-   "div": "I1",
-   "train": 2770,
+   "div": "E3",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "EC",
+   "train": 0,
+   "skipped": [],
+   "models": [],
+   "error": "only 0 training matches"
+  },
+  {
+   "div": "I2",
+   "train": 2780,
    "skipped": [],
    "models": [
     "goals",
@@ -77,11 +73,11 @@
     "fouls",
     "yellows"
    ],
-   "rows": 82
+   "rows": 820
   },
   {
-   "div": "SP1",
-   "train": 2779,
+   "div": "SC0",
+   "train": 1628,
    "skipped": [],
    "models": [
     "goals",
@@ -92,39 +88,7 @@
     "fouls",
     "yellows"
    ],
-   "rows": 82
-  },
-  {
-   "div": "SP2",
-   "train": 3385,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 82
-  },
-  {
-   "div": "T1",
-   "train": 2575,
-   "skipped": [
-    "Buyuksehyr v Corum (9 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 0
+   "rows": 164
   }
  ]
 }
