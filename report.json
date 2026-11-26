@@ -1,132 +1,48 @@
 {
-  "run_at": "2026-11-25T15:29:07+00:00",
-  "today": "2026-11-25",
+  "run_at": "2026-11-26T15:00:30+00:00",
+  "today": "2026-11-26",
   "notify": false,
   "errors": [],
-  "history_matches": 12351,
-  "history_with_closing": 12343,
-  "picks_settled_today": 0,
-  "fixtures_scanned": 9,
+  "history_matches": 12379,
+  "history_with_closing": 12371,
+  "picks_settled_today": 26,
+  "fixtures_scanned": 1,
   "divisions_priced": [
-    "E1",
-    "E2",
-    "I2"
+    "E2"
   ],
-  "divisions_skipped": {
-    "EC": "only 0 training matches"
-  },
-  "fixtures_skipped_thin_ratings": 1,
-  "thin_teams": [
-    "Arezzo (10.0 eff. matches)"
-  ],
+  "divisions_skipped": {},
+  "fixtures_skipped_thin_ratings": 0,
+  "thin_teams": [],
   "implausible_edges_rejected": 0,
   "implausible_examples": [],
   "qualifying_picks": [
-    {
-      "kickoff": "2026-11-25",
-      "league": "E1",
-      "fixture": "Stoke v Millwall",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.3758738370591288,
-      "odds_available": 3.25,
-      "devigged_market_p": 0.2866901834075453,
-      "edge_pct": 22.158997044216868,
-      "lam": 1.1739678017763266,
-      "mu": 1.2418158326297666
-    },
-    {
-      "kickoff": "2026-11-25",
-      "league": "E1",
-      "fixture": "Watford v Blackburn",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.6077227314485063,
-      "odds_available": 1.91,
-      "devigged_market_p": 0.5,
-      "edge_pct": 16.075041706664695,
-      "lam": 1.1185174580864785,
-      "mu": 1.1375439163470171
-    },
-    {
-      "kickoff": "2026-11-25",
-      "league": "E1",
-      "fixture": "Bolton v West Brom",
-      "market": "1x2",
-      "selection": "H",
-      "p_model": 0.31075231678397924,
-      "odds_available": 3.7,
-      "devigged_market_p": 0.2512202666699498,
-      "edge_pct": 14.978357210072325,
-      "lam": 1.3145398551617584,
-      "mu": 1.6069036562813817
-    },
-    {
-      "kickoff": "2026-11-25",
-      "league": "I2",
-      "fixture": "Cremonese v Avellino",
-      "market": "1x2",
-      "selection": "A",
-      "p_model": 0.25883372017709877,
-      "odds_available": 4.33,
-      "devigged_market_p": 0.20689419682971588,
-      "edge_pct": 12.075000836683758,
-      "lam": 1.457277847717501,
-      "mu": 1.041310844423653
-    },
-    {
-      "kickoff": "2026-11-25",
-      "league": "I2",
-      "fixture": "Padova v Sampdoria",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.6368189036359397,
-      "odds_available": 1.7,
-      "devigged_market_p": 0.5526315789473685,
-      "edge_pct": 8.25921361810975,
-      "lam": 1.1444665741959035,
-      "mu": 1.0030458771375577
-    },
-    {
-      "kickoff": "2026-11-25",
-      "league": "I2",
-      "fixture": "Pisa v Modena",
-      "market": "over_under",
-      "selection": "UNDER",
-      "p_model": 0.5281322651287156,
-      "odds_available": 2.0,
-      "devigged_market_p": 0.47368421052631576,
-      "edge_pct": 5.626453025743117,
-      "lam": 1.4299406928204705,
-      "mu": 1.131579369168137
-    },
     {
       "kickoff": "2026-11-26",
       "league": "E2",
       "fixture": "Doncaster v Huddersfield",
       "market": "over_under",
       "selection": "UNDER",
-      "p_model": 0.456237639852763,
+      "p_model": 0.45766493754166915,
       "odds_available": 2.3,
       "devigged_market_p": 0.41025641025641024,
-      "edge_pct": 4.934657166135481,
-      "lam": 1.0972109137603936,
-      "mu": 1.7586873491498662
+      "edge_pct": 5.262935634583887,
+      "lam": 1.0970690450835687,
+      "mu": 1.752748222468605
     }
   ],
   "running": {
-    "picks_total": 1173,
-    "picks_with_clv": 995,
-    "mean_clv_fair_pct": -6.87,
+    "picks_total": 1174,
+    "picks_with_clv": 1021,
+    "mean_clv_fair_pct": -6.928,
     "clv_ci95": [
-      -7.485,
-      -6.255
+      -7.534,
+      -6.322
     ],
     "clv_verdict": "negative and significant",
-    "kill_criterion": "MET \u2014 995 picks with mean fair CLV -6.87%. Method v2 section 8 says stop.",
-    "picks_settled": 995,
-    "paper_roi_pct": -0.605,
-    "hit_rate": 0.3688
+    "kill_criterion": "MET \u2014 1021 picks with mean fair CLV -6.93%. Method v2 section 8 says stop.",
+    "picks_settled": 1021,
+    "paper_roi_pct": -0.719,
+    "hit_rate": 0.3683
   },
   "gate_passed": false,
   "notify_reasons": []

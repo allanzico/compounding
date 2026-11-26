@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-25T15:29:11+00:00",
- "today": "2026-11-25",
- "fixtures": 8,
- "divisions": 3,
- "market_lines": 656,
- "history_matches": 10723,
+ "generated": "2026-11-26T15:00:32+00:00",
+ "today": "2026-11-26",
+ "fixtures": 1,
+ "divisions": 1,
+ "market_lines": 82,
+ "history_matches": 3891,
  "validation": {
   "goals": "no better than league average",
   "corners": "no better than league average",
@@ -17,23 +17,8 @@
  },
  "diagnostics": [
   {
-   "div": "E1",
-   "train": 4056,
-   "skipped": [],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 328
-  },
-  {
    "div": "E2",
-   "train": 3887,
+   "train": 3891,
    "skipped": [],
    "models": [
     "goals",
@@ -45,30 +30,6 @@
     "yellows"
    ],
    "rows": 82
-  },
-  {
-   "div": "EC",
-   "train": 0,
-   "skipped": [],
-   "models": [],
-   "error": "only 0 training matches"
-  },
-  {
-   "div": "I2",
-   "train": 2780,
-   "skipped": [
-    "Mantova v Arezzo (10 eff. matches)"
-   ],
-   "models": [
-    "goals",
-    "ht_goals",
-    "shots",
-    "sot",
-    "corners",
-    "fouls",
-    "yellows"
-   ],
-   "rows": 246
   }
  ]
 }
